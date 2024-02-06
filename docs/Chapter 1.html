@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>CASA0023 - Learning Diary (JTSE) - 1&nbsp; Getting started with remote sensing</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./Chapter 2.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Chapter 1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting started with remote sensing</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">CASA0023 - Learning Diary (JTSE)</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter 1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting started with remote sensing</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter 2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Xaringan</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter 3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Title</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter 4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Title</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1.1</span> Summary</a>
+  <ul class="collapse">
+  <li><a href="#definition-of-remote-sensing" id="toc-definition-of-remote-sensing" class="nav-link" data-scroll-target="#definition-of-remote-sensing"><span class="header-section-number">1.1.1</span> Definition of Remote Sensing</a></li>
+  <li><a href="#types-of-resolution" id="toc-types-of-resolution" class="nav-link" data-scroll-target="#types-of-resolution"><span class="header-section-number">1.1.2</span> Types of Resolution</a></li>
+  </ul></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">1.2</span> Application</a>
+  <ul class="collapse">
+  <li><a href="#practical-extracts" id="toc-practical-extracts" class="nav-link" data-scroll-target="#practical-extracts"><span class="header-section-number">1.2.1</span> Practical Extracts</a></li>
+  <li><a href="#sentinel-2-or-landsat-8.-which-one-should-i-use" id="toc-sentinel-2-or-landsat-8.-which-one-should-i-use" class="nav-link" data-scroll-target="#sentinel-2-or-landsat-8.-which-one-should-i-use"><span class="header-section-number">1.2.2</span> Sentinel 2 or Landsat 8. Which one should I use?</a></li>
+  </ul></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">1.3</span> Reflection</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting started with remote sensing</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="W1Image/What-Is-Remote-Sensing.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>What is Remote Sensing? Source: <span class="citation" data-cites="gisgeography2023">GIS Geography (<a href="references.html#ref-gisgeography2023" role="doc-biblioref">2023</a>)</span></p>
+<section id="summary" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">1.1</span> Summary</h2>
+<p>In the first lesson of the course, we covered the basics of remote sensing. These include the definition of remote sensing, types of remote sensing, electromagnetic signatures and types of resolution. The summary section will mainly focus on the types of resolution.</p>
+<section id="definition-of-remote-sensing" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="definition-of-remote-sensing"><span class="header-section-number">1.1.1</span> Definition of Remote Sensing</h3>
+<p>USGS: Remote Sensing is the process of detecting and monitoring the physical characteristics of an area by measuring its reflected and emitted radiation at a distance (typically from satellite or aircraft) <span class="citation" data-cites="usgs">(<a href="references.html#ref-usgs" role="doc-biblioref">USGS, n.d.</a>)</span>.</p>
+<p>NASA: Remote sensing is acquiring of information from a distance. NASA observes Earth and other planetary bodies via remote sensors on satellites and aircraft that detect and record reflected or emitted energy <span class="citation" data-cites="nasa">(<a href="references.html#ref-nasa" role="doc-biblioref">NASA, n.d.</a>)</span>.</p>
+</section>
+<section id="types-of-resolution" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="types-of-resolution"><span class="header-section-number">1.1.2</span> Types of Resolution</h3>
+<ol type="1">
+<li>Spatial Resolution: the size of each pixel within a digital image and the area on Earth’s surface represented by that pixel <span class="citation" data-cites="nasa">(<a href="references.html#ref-nasa" role="doc-biblioref">NASA, n.d.</a>)</span>. A finer spatial resolution (or the smaller the number) means one is able to observe greater details while a coarser spatial resolution (or the bigger the number) means the image would be more pixelated as demonstrated below.</li>
+</ol>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="W1Image/SpatialResolution.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Campus of the University of Maryland at College Park at 1m, 10m, 30m and 250m spatial resolution. Source: <span class="citation" data-cites="liang2020">Liang and Wang (<a href="references.html#ref-liang2020" role="doc-biblioref">2020</a>)</span></p>
+<ol start="2" type="1">
+<li>Temporal Resolution: frequency at which a satellite revisits the same observation area <span class="citation" data-cites="nasa">(<a href="references.html#ref-nasa" role="doc-biblioref">NASA, n.d.</a>)</span>. Geostationary satellites orbit at the same rate of the earth and focus on the same observation area resulting in a higher temporal resolution. In contrast, polar orbiting satellites orbit around the entire Earth and able to observe the different parts of the world, at the cost of temporal resolution which could vary from 1 to 16 days.</li>
+</ol>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="W1Image/TemporalResolution.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Geostationary and Polar Orbiting Satellites. Source: <span class="citation" data-cites="instituteofphysics">Institute of Physics (<a href="references.html#ref-instituteofphysics" role="doc-biblioref">n.d.</a>)</span></p>
+<ol start="3" type="1">
+<li>Spectral Resolution: the number and width of spectral bands in a sensor system <span class="citation" data-cites="liang2020">(<a href="references.html#ref-liang2020" role="doc-biblioref">Liang and Wang 2020</a>)</span>. Sensors which have more bands with narrower wavelengths, have finer spectral resolution. This would allow greater distinction to be made between various features such as rock or vegetation types.</li>
+</ol>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="W1Image/SpectralResolution.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Comparison of spectral bands between Sentinel-2 and Landsat-8 which have similar characteristics for the coastal aerosol (440 nm), visible (490-800 nm) and short-wave infrared or SWIR (1300-2400 nm) spectral bands. Source: <span class="citation" data-cites="lopez-puigdollersBenchmarkingDeepLearning2021">López-Puigdollers, Mateo-Garcia, and Gómez-Chova (<a href="references.html#ref-lopez-puigdollersBenchmarkingDeepLearning2021" role="doc-biblioref">2021</a>)</span></p>
+<ol start="4" type="1">
+<li>Radiometric Resolution: amount of information in each pixel <span class="citation" data-cites="nasa">(<a href="references.html#ref-nasa" role="doc-biblioref">NASA, n.d.</a>)</span>. Sensors with higher radiometric resolution are more sensitive and able to detect subtle differences in electromagnetic energy. This allows for features to be distinguished better such as variations in vegetation or water colour.</li>
+</ol>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="W1Image/RadiometricResolution.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Campus of the University of Maryland at College Park at (A) 8 bits (2<sup>8</sup> or 256 discrete shades of grey) , (B) 4 bits (2<sup>4</sup> or 16 discrete shades of grey), (C) 2 bits (2<sup>2</sup> or 4 discrete shades of grey) and (D) 1 bit (2<sup>1</sup> or 2 discrete shades of grey) radiometric resolution. Source: <span class="citation" data-cites="liang2020">Liang and Wang (<a href="references.html#ref-liang2020" role="doc-biblioref">2020</a>)</span></p>
+</section>
+</section>
+<section id="application" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="application"><span class="header-section-number">1.2</span> Application</h2>
+<section id="practical-extracts" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="practical-extracts"><span class="header-section-number">1.2.1</span> Practical Extracts</h3>
+<p>As part of our first practical for remote sensing, we had to select a city of our choice (Los Angeles) and source for Sentinel 2 and Landsat 8 images related to it. In SNAP, I selected various points of interest (urban, high urban, water, vegetation and mountains).</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="W1Image/PracticalPOI.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Landsat 8 image of Los Angeles with Points of Interest selected in SNAP. Source: Author’s Own.</p>
+<p>R was then used to plot the spectral profiles for both Sentinel 2 and Landsat 8. The results are as follow.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="W1Image/SentinelPractical.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Spectral Profile generated from Sentinel 2. Source: Author’s Own.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="W1Image/LandsatPractical.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Spectral Profile generated from Landsat 8. Source: Author’s Own.</p>
+</section>
+<section id="sentinel-2-or-landsat-8.-which-one-should-i-use" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="sentinel-2-or-landsat-8.-which-one-should-i-use"><span class="header-section-number">1.2.2</span> Sentinel 2 or Landsat 8. Which one should I use?</h3>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="W1Image/L8vS2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Comparison of Landsat 8 vs.&nbsp;Sentinel 2 bands. Source: <span class="citation" data-cites="ahadyClassificationComparisonLandsat82022">Ahady and Kaplan (<a href="references.html#ref-ahadyClassificationComparisonLandsat82022" role="doc-biblioref">2022</a>)</span></p>
+<p>Sentinel 2 performs better than Landsat 8 as it has better spatial resolution as seen from the pixel size column in the table above <span class="citation" data-cites="ahadyClassificationComparisonLandsat82022">(<a href="references.html#ref-ahadyClassificationComparisonLandsat82022" role="doc-biblioref">Ahady and Kaplan 2022</a>)</span>. It also has a better temporal resolution of ten days at the equator using one satellite, and five days using two satellites, under the assumption of cloud-free conditions <span class="citation" data-cites="sentinelonline">(<a href="references.html#ref-sentinelonline" role="doc-biblioref">Sentinel Online, n.d.</a>)</span>. In contrast, Landsat 8 has a temporal resolution of 16 days <span class="citation" data-cites="castaldiSentinel2Landsat8MultiTemporal2021">(<a href="references.html#ref-castaldiSentinel2Landsat8MultiTemporal2021" role="doc-biblioref">Castaldi 2021</a>)</span>.</p>
+<p>A study of both satellites in forest variable prediction shows that Sentinel 2 performed better than Landsat 8 in predictive accuracy, due to the former’s higher spatial resolution and additional red-edge bands <span class="citation" data-cites="astolaComparisonSentinel2Landsat2019">(<a href="references.html#ref-astolaComparisonSentinel2Landsat2019" role="doc-biblioref">Astola et al. 2019</a>)</span>. Sentinel 2 has four narrow bands in the red edge spectral domain which allows it to accurately study vegetation health or crop stress monitoring <span class="citation" data-cites="segarraRemoteSensingPrecision2020">(<a href="references.html#ref-segarraRemoteSensingPrecision2020" role="doc-biblioref">Segarra et al. 2020</a>)</span>.</p>
+<p>Where Landsat 8 performs better is that it has thermal infrared sensors to measure surface temperature, a feature that Sentinel 2 does not possess <span class="citation" data-cites="usgs">(<a href="references.html#ref-usgs" role="doc-biblioref">USGS, n.d.</a>)</span>. This makes Landsat 8 suitable for studying processes such as the hydrologic cycle and climate change <span class="citation" data-cites="liEvaluationLandsat8like2021">(<a href="references.html#ref-liEvaluationLandsat8like2021" role="doc-biblioref">Li et al. 2021</a>)</span>. Landsat 8’s capabilities to measure land surface temperature also enables it to identify areas where the urban heat island effect is strongest in cities <span class="citation" data-cites="orusaLandsatThermalData2019">(<a href="references.html#ref-orusaLandsatThermalData2019" role="doc-biblioref">Orusa and Mondino 2019</a>)</span>.</p>
+<p>Overall, Sentinel-2 would be useful for looking at Land Use Land Cover (LULC) and vegetation related studies while Landsat 8 would be useful for studies related to urban heat island and climate change.</p>
+</section>
+</section>
+<section id="reflection" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> Reflection</h2>
+<p>Why can’t we develop a satellite that boast the best spatial, temporal, spectral and radiometric resolution, while also incorporating sensors for diverse measurements such as temperature? The limitations stem from inherent trade-offs related to the sensor designs. For example, better quality spatial and multispectral data on satellites would compete for onboard data storage space, as well as data transmission requirements to communicate with ground stations <span class="citation" data-cites="ciesin1993">(<a href="references.html#ref-ciesin1993" role="doc-biblioref">CIESIN 1993</a>)</span>. To improve the signal-to-noise ratio, solutions such as having a larger pixel size or accepting light from a wider spectral interval can be used, but will result in a decrease in spatial and spectral resolution respectively <span class="citation" data-cites="jiaTradeoffsSpatialSpectral2022">(<a href="references.html#ref-jiaTradeoffsSpatialSpectral2022" role="doc-biblioref">Jia et al. 2022</a>)</span>.</p>
+<p>Given that no perfect satellite exists currently, it ultimately depends on one’s research needs and what to prioritise. MODIS which has 36 bands, can be used to study dust clouds because its bands 29-32 are able to track dust aerosols and it has a temporal resolution of one day <span class="citation" data-cites="boroughaniPredictingDustStorm2021">(<a href="references.html#ref-boroughaniPredictingDustStorm2021" role="doc-biblioref">Boroughani et al. 2021</a>)</span>. However, it has medium spatial resolution at 250m, 500m and 1000m depending on the band. . On the other hand, a study of land use changes over time probably does not require daily satellite images but perhaps at a monthly interval. However, higher spatial resolution to distinguish finer details to observe changes in the pattern would be essential. A table of some commonly used satellite sensors as below compiled shows some of the tradeoffs between the various resolutions.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="W1Image/CommonSatellites.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Overview of some commonly used satellite sensors. Source: <span class="citation" data-cites="liang2020">Liang and Wang (<a href="references.html#ref-liang2020" role="doc-biblioref">2020</a>)</span></p>
+<p>Another thing that struck me is how big the remote sensing data is. Processing and saving in SNAP, followed by running the spectral signatures in R took quite a fair bit of waiting time as a result. I had flashbacks to my undergraduate days waiting in the lab for some remote sensing results to process on ENVI and ArcGIS. Hence, the Google Earth Engine segment would be something to look forward to given it runs on cloud computing resources and will be able to handle geospatial data compared to my personal device. I was also reminded of the recent AGI GeoCom 2023 on the ‘Environmental Impacts of Earth Observation in the Constellation and Cloud Computing Era’ presentation <span class="citation" data-cites="wilkinsonEnvironmentalImpactsEarth2024">(<a href="references.html#ref-wilkinsonEnvironmentalImpactsEarth2024" role="doc-biblioref">Wilkinson et al. 2024</a>)</span>. The central idea was that considering the substantial file size of remote sensing data and the fact that not all data is essential, it may be worthwhile to reassess the necessity of storing all available datasets. This is especially so due to the environmental implications associated with the storage of large datasets in data centers.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-ahadyClassificationComparisonLandsat82022" class="csl-entry" role="listitem">
+Ahady, Abdul Baqi, and Gordana Kaplan. 2022. <span>“Classification Comparison of <span>Landsat-8</span> and <span>Sentinel-2</span> Data in <span>Google Earth Engine</span>, Study Case of the City of <span>Kabul</span>.”</span> <em>International Journal of Engineering and Geosciences</em> 7 (1): 24–31. <a href="https://doi.org/10.26833/ijeg.860077">https://doi.org/10.26833/ijeg.860077</a>.
+</div>
+<div id="ref-astolaComparisonSentinel2Landsat2019" class="csl-entry" role="listitem">
+Astola, Heikki, Tuomas Häme, Laura Sirro, Matthieu Molinier, and Jorma Kilpi. 2019. <span>“Comparison of <span>Sentinel-2</span> and <span>Landsat</span> 8 Imagery for Forest Variable Prediction in Boreal Region.”</span> <em>Remote Sensing of Environment</em> 223: 257–73. <a href="https://doi.org/10.1016/j.rse.2019.01.019">https://doi.org/10.1016/j.rse.2019.01.019</a>.
+</div>
+<div id="ref-boroughaniPredictingDustStorm2021" class="csl-entry" role="listitem">
+Boroughani, Mahdi, Sima Pourhashemi, Hamid Gholami, and Dimitris G Kaskaoutis. 2021. <span>“Predicting of Dust Storm Source by Combining Remote Sensing, Statistic-Based Predictive Models and Game Theory in the <span>Sistan</span> Watershed, Southwestern <span>Asia</span>.”</span> <em>Journal of Arid Land</em> 13: 1103–21. <a href="https://doi.org/10.1007/s40333-021-0023-3">https://doi.org/10.1007/s40333-021-0023-3</a>.
+</div>
+<div id="ref-castaldiSentinel2Landsat8MultiTemporal2021" class="csl-entry" role="listitem">
+Castaldi, Fabio. 2021. <span>“Sentinel-2 and <span>Landsat-8 Multi-Temporal Series</span> to <span>Estimate Topsoil Properties</span> on <span>Croplands</span>.”</span> <em>Remote Sensing</em> 13 (17). <a href="https://doi.org/10.3390/rs13173345">https://doi.org/10.3390/rs13173345</a>.
+</div>
+<div id="ref-ciesin1993" class="csl-entry" role="listitem">
+CIESIN. 1993. <span>“Box 4-b–System Tradeoffs.”</span> <a href="http://www.ciesin.org/docs/005-356/box4B.html#:~:tet=Sensor%20design%20requires%20tradeoffs%20among,at%20the%20expense%20of%20another">http://www.ciesin.org/docs/005-356/box4B.html#:~:tet=Sensor%20design%20requires%20tradeoffs%20among,at%20the%20expense%20of%20another</a>.
+</div>
+<div id="ref-gisgeography2023" class="csl-entry" role="listitem">
+GIS Geography. 2023. <span>“What Is Remote Sensing? The Definitive Guide.”</span> <a href="https://gisgeography.com/remote-sensing-earth-observation-guide/">https://gisgeography.com/remote-sensing-earth-observation-guide/</a>.
+</div>
+<div id="ref-instituteofphysics" class="csl-entry" role="listitem">
+Institute of Physics. n.d. <span>“Different Orbits.”</span> <a href="https://spark.iop.org/different-orbits">https://spark.iop.org/different-orbits</a>.
+</div>
+<div id="ref-jiaTradeoffsSpatialSpectral2022" class="csl-entry" role="listitem">
+Jia, Jianxin, Jinsong Chen, Xiaorou Zheng, Yueming Wang, Shanxin Guo, Haibin Sun, Changhui Jiang, et al. 2022. <span>“Tradeoffs in the <span>Spatial</span> and <span>Spectral Resolution</span> of <span>Airborne Hyperspectral Imaging Systems</span>: <span>A Crop Identification Case Study</span>.”</span> <em>IEEE Transactions on Geoscience and Remote Sensing</em> 60: 1–18. <a href="https://doi.org/10.1109/TGRS.2021.3096999">https://doi.org/10.1109/TGRS.2021.3096999</a>.
+</div>
+<div id="ref-liEvaluationLandsat8like2021" class="csl-entry" role="listitem">
+Li, Shenglin, Jinglei Wang, Dacheng Li, Zhongxin Ran, and Bo Yang. 2021. <span>“Evaluation of <span>Landsat</span> 8-Like <span>Land Surface Temperature</span> by <span>Fusing Landsat</span> 8 and <span>MODIS Land Surface Temperature Product</span>.”</span> <em>Processes</em> 9 (12). <a href="https://doi.org/10.3390/pr9122262">https://doi.org/10.3390/pr9122262</a>.
+</div>
+<div id="ref-liang2020" class="csl-entry" role="listitem">
+Liang, Shunlin, and Jindi Wang. 2020. <em>Advanced Remote Sensing - Terrestrial Information Extraction and Applications</em>. 2nd ed. London: Elsevier.
+</div>
+<div id="ref-lopez-puigdollersBenchmarkingDeepLearning2021" class="csl-entry" role="listitem">
+López-Puigdollers, Dan, Gonzalo Mateo-Garcia, and Luis Gómez-Chova. 2021. <span>“Benchmarking <span>Deep Learning Models</span> for <span>Cloud Detection</span> in <span>Landsat-8</span> and <span>Sentinel-2 Images</span>.”</span> <em>Remote Sensing</em> 13 (5). <a href="https://doi.org/10.3390/rs13050992">https://doi.org/10.3390/rs13050992</a>.
+</div>
+<div id="ref-nasa" class="csl-entry" role="listitem">
+NASA. n.d. <span>“What Is Remote Sensing?”</span> <a href="https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing">https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing</a>.
+</div>
+<div id="ref-orusaLandsatThermalData2019" class="csl-entry" role="listitem">
+Orusa, T, and E Borgogno Mondino. 2019. <span>“Landsat 8 Thermal Data to Support Urban Management and Planning in the Climate Change Era: A Case Study in <span>Torino</span> Area, <span>NW Italy</span>.”</span> <em>Remote Sensing Technologies and Applications in Urban Environments IV</em> 11157. <a href="https://doi.org/10.1117/12.2533110">https://doi.org/10.1117/12.2533110</a>.
+</div>
+<div id="ref-segarraRemoteSensingPrecision2020" class="csl-entry" role="listitem">
+Segarra, Joel, Maria Luisa Buchaillot, Jose Luis Araus, and Shawn C. Kefauver. 2020. <span>“Remote <span>Sensing</span> for <span>Precision Agriculture</span>: <span>Sentinel-2 Improved Features</span> and <span>Applications</span>.”</span> <em>Agronomy</em> 10 (5). <a href="https://doi.org/10.3390/agronomy10050641">https://doi.org/10.3390/agronomy10050641</a>.
+</div>
+<div id="ref-sentinelonline" class="csl-entry" role="listitem">
+Sentinel Online. n.d. <span>“Resolution and Swath.”</span> <a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-2/instrument-payload/resolution-and-swath">https://sentinel.esa.int/web/sentinel/missions/sentinel-2/instrument-payload/resolution-and-swath</a>.
+</div>
+<div id="ref-usgs" class="csl-entry" role="listitem">
+USGS. n.d. <span>“What Is Remote Sensing and What Is It Used For?”</span> <a href="https://www.usgs.gov/faqs/what-remote-sensing-and-what-it-used">https://www.usgs.gov/faqs/what-remote-sensing-and-what-it-used</a>.
+</div>
+<div id="ref-wilkinsonEnvironmentalImpactsEarth2024" class="csl-entry" role="listitem">
+Wilkinson, R, M M Mleczko, R J W Brewin, K J Gaston, M Mueller, J D Shutler, X Yan, and K Anderson. 2024. <span>“Environmental Impacts of Earth Observation Data in the Constellation and Cloud Computing Era.”</span> <em>Science of The Total Environment</em> 909. <a href="https://doi.org/10.1016/j.scitotenv.2023.168584">https://doi.org/10.1016/j.scitotenv.2023.168584</a>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link  aria-label=" preface"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./Chapter 2.html" class="pagination-link" aria-label="<span class='chapter-number'>2</span>&nbsp; <span class='chapter-title'>Xaringan</span>">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Xaringan</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

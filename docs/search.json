@@ -1,0 +1,132 @@
+[
+  {
+    "objectID": "Chapter 2.html",
+    "href": "Chapter 2.html",
+    "title": "2  Xaringan",
+    "section": "",
+    "text": "2.1 Xaringan Presentation - MODIS\nThe content for week 2 is a presentation in Xaringan on MODIS. The presentation consisting of a summary, application and reflection are all included in the slides below:",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Xaringan</span>"
+    ]
+  },
+  {
+    "objectID": "Chapter 3.html",
+    "href": "Chapter 3.html",
+    "title": "3  Title",
+    "section": "",
+    "text": "3.1 Summary",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Title</span>"
+    ]
+  },
+  {
+    "objectID": "Chapter 3.html#application",
+    "href": "Chapter 3.html#application",
+    "title": "3  Title",
+    "section": "3.2 Application",
+    "text": "3.2 Application\n\n3.2.1",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Title</span>"
+    ]
+  },
+  {
+    "objectID": "Chapter 3.html#reflection",
+    "href": "Chapter 3.html#reflection",
+    "title": "3  Title",
+    "section": "3.3 Reflection",
+    "text": "3.3 Reflection",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Title</span>"
+    ]
+  },
+  {
+    "objectID": "Chapter 4.html",
+    "href": "Chapter 4.html",
+    "title": "4  Title",
+    "section": "",
+    "text": "4.1 Summary",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Title</span>"
+    ]
+  },
+  {
+    "objectID": "Chapter 4.html#application",
+    "href": "Chapter 4.html#application",
+    "title": "4  Title",
+    "section": "4.2 Application",
+    "text": "4.2 Application\n\n4.2.1",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Title</span>"
+    ]
+  },
+  {
+    "objectID": "Chapter 4.html#reflection",
+    "href": "Chapter 4.html#reflection",
+    "title": "4  Title",
+    "section": "4.3 Reflection",
+    "text": "4.3 Reflection",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Title</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Ahady, Abdul Baqi, and Gordana Kaplan. 2022. “Classification\nComparison of Landsat-8 and Sentinel-2 Data in\nGoogle Earth Engine, Study Case of the City of\nKabul.” International Journal of Engineering and\nGeosciences 7 (1): 24–31. https://doi.org/10.26833/ijeg.860077.\n\n\nAstola, Heikki, Tuomas Häme, Laura Sirro, Matthieu Molinier, and Jorma\nKilpi. 2019. “Comparison of Sentinel-2 and\nLandsat 8 Imagery for Forest Variable Prediction in Boreal\nRegion.” Remote Sensing of Environment 223: 257–73. https://doi.org/10.1016/j.rse.2019.01.019.\n\n\nBoroughani, Mahdi, Sima Pourhashemi, Hamid Gholami, and Dimitris G\nKaskaoutis. 2021. “Predicting of Dust Storm Source by Combining\nRemote Sensing, Statistic-Based Predictive Models and Game Theory in the\nSistan Watershed, Southwestern Asia.”\nJournal of Arid Land 13: 1103–21. https://doi.org/10.1007/s40333-021-0023-3.\n\n\nCastaldi, Fabio. 2021. “Sentinel-2 and Landsat-8\nMulti-Temporal Series to Estimate Topsoil Properties\non Croplands.” Remote Sensing 13 (17). https://doi.org/10.3390/rs13173345.\n\n\nCIESIN. 1993. “Box 4-b–System Tradeoffs.” http://www.ciesin.org/docs/005-356/box4B.html#:~:tet=Sensor%20design%20requires%20tradeoffs%20among,at%20the%20expense%20of%20another.\n\n\nGIS Geography. 2023. “What Is Remote Sensing? The Definitive\nGuide.” https://gisgeography.com/remote-sensing-earth-observation-guide/.\n\n\nInstitute of Physics. n.d. “Different Orbits.” https://spark.iop.org/different-orbits.\n\n\nJia, Jianxin, Jinsong Chen, Xiaorou Zheng, Yueming Wang, Shanxin Guo,\nHaibin Sun, Changhui Jiang, et al. 2022. “Tradeoffs in the\nSpatial and Spectral Resolution of\nAirborne Hyperspectral Imaging Systems: A Crop\nIdentification Case Study.” IEEE Transactions on\nGeoscience and Remote Sensing 60: 1–18. https://doi.org/10.1109/TGRS.2021.3096999.\n\n\nLi, Shenglin, Jinglei Wang, Dacheng Li, Zhongxin Ran, and Bo Yang. 2021.\n“Evaluation of Landsat 8-Like Land Surface\nTemperature by Fusing Landsat 8 and MODIS Land\nSurface Temperature Product.” Processes 9 (12).\nhttps://doi.org/10.3390/pr9122262.\n\n\nLiang, Shunlin, and Jindi Wang. 2020. Advanced Remote Sensing -\nTerrestrial Information Extraction and Applications. 2nd ed.\nLondon: Elsevier.\n\n\nLópez-Puigdollers, Dan, Gonzalo Mateo-Garcia, and Luis Gómez-Chova.\n2021. “Benchmarking Deep Learning Models for\nCloud Detection in Landsat-8 and\nSentinel-2 Images.” Remote Sensing 13 (5).\nhttps://doi.org/10.3390/rs13050992.\n\n\nNASA. n.d. “What Is Remote Sensing?” https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing.\n\n\nOrusa, T, and E Borgogno Mondino. 2019. “Landsat 8 Thermal Data to\nSupport Urban Management and Planning in the Climate Change Era: A Case\nStudy in Torino Area, NW Italy.”\nRemote Sensing Technologies and Applications in Urban Environments\nIV 11157. https://doi.org/10.1117/12.2533110.\n\n\nSegarra, Joel, Maria Luisa Buchaillot, Jose Luis Araus, and Shawn C.\nKefauver. 2020. “Remote Sensing for Precision\nAgriculture: Sentinel-2 Improved Features and\nApplications.” Agronomy 10 (5). https://doi.org/10.3390/agronomy10050641.\n\n\nSentinel Online. n.d. “Resolution and Swath.” https://sentinel.esa.int/web/sentinel/missions/sentinel-2/instrument-payload/resolution-and-swath.\n\n\nUSGS. n.d. “What Is Remote Sensing and What Is It Used\nFor?” https://www.usgs.gov/faqs/what-remote-sensing-and-what-it-used.\n\n\nWilkinson, R, M M Mleczko, R J W Brewin, K J Gaston, M Mueller, J D\nShutler, X Yan, and K Anderson. 2024. “Environmental Impacts of\nEarth Observation Data in the Constellation and Cloud Computing\nEra.” Science of The Total Environment 909. https://doi.org/10.1016/j.scitotenv.2023.168584.",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "Chapter 1.html",
+    "href": "Chapter 1.html",
+    "title": "1  Getting started with remote sensing",
+    "section": "",
+    "text": "1.1 Summary\nIn the first lesson of the course, we covered the basics of remote sensing. These include the definition of remote sensing, types of remote sensing, electromagnetic signatures and types of resolution. The summary section will mainly focus on the types of resolution.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with remote sensing</span>"
+    ]
+  },
+  {
+    "objectID": "Chapter 1.html#summary",
+    "href": "Chapter 1.html#summary",
+    "title": "1  Getting started with remote sensing",
+    "section": "",
+    "text": "1.1.1 Definition of Remote Sensing\nUSGS: Remote Sensing is the process of detecting and monitoring the physical characteristics of an area by measuring its reflected and emitted radiation at a distance (typically from satellite or aircraft) (USGS, n.d.).\nNASA: Remote sensing is acquiring of information from a distance. NASA observes Earth and other planetary bodies via remote sensors on satellites and aircraft that detect and record reflected or emitted energy (NASA, n.d.).\n\n\n1.1.2 Types of Resolution\n\nSpatial Resolution: the size of each pixel within a digital image and the area on Earth’s surface represented by that pixel (NASA, n.d.). A finer spatial resolution (or the smaller the number) means one is able to observe greater details while a coarser spatial resolution (or the bigger the number) means the image would be more pixelated as demonstrated below.\n\n\n\n\n\n\n\n\n\n\nCampus of the University of Maryland at College Park at 1m, 10m, 30m and 250m spatial resolution. Source: Liang and Wang (2020)\n\nTemporal Resolution: frequency at which a satellite revisits the same observation area (NASA, n.d.). Geostationary satellites orbit at the same rate of the earth and focus on the same observation area resulting in a higher temporal resolution. In contrast, polar orbiting satellites orbit around the entire Earth and able to observe the different parts of the world, at the cost of temporal resolution which could vary from 1 to 16 days.\n\n\n\n\n\n\n\n\n\n\nGeostationary and Polar Orbiting Satellites. Source: Institute of Physics (n.d.)\n\nSpectral Resolution: the number and width of spectral bands in a sensor system (Liang and Wang 2020). Sensors which have more bands with narrower wavelengths, have finer spectral resolution. This would allow greater distinction to be made between various features such as rock or vegetation types.\n\n\n\n\n\n\n\n\n\n\nComparison of spectral bands between Sentinel-2 and Landsat-8 which have similar characteristics for the coastal aerosol (440 nm), visible (490-800 nm) and short-wave infrared or SWIR (1300-2400 nm) spectral bands. Source: López-Puigdollers, Mateo-Garcia, and Gómez-Chova (2021)\n\nRadiometric Resolution: amount of information in each pixel (NASA, n.d.). Sensors with higher radiometric resolution are more sensitive and able to detect subtle differences in electromagnetic energy. This allows for features to be distinguished better such as variations in vegetation or water colour.\n\n\n\n\n\n\n\n\n\n\nCampus of the University of Maryland at College Park at (A) 8 bits (28 or 256 discrete shades of grey) , (B) 4 bits (24 or 16 discrete shades of grey), (C) 2 bits (22 or 4 discrete shades of grey) and (D) 1 bit (21 or 2 discrete shades of grey) radiometric resolution. Source: Liang and Wang (2020)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with remote sensing</span>"
+    ]
+  },
+  {
+    "objectID": "Chapter 1.html#application",
+    "href": "Chapter 1.html#application",
+    "title": "1  Getting started with remote sensing",
+    "section": "1.2 Application",
+    "text": "1.2 Application\n\n1.2.1 Practical Extracts\nAs part of our first practical for remote sensing, we had to select a city of our choice (Los Angeles) and source for Sentinel 2 and Landsat 8 images related to it. In SNAP, I selected various points of interest (urban, high urban, water, vegetation and mountains).\n\n\n\n\n\n\n\n\n\nLandsat 8 image of Los Angeles with Points of Interest selected in SNAP. Source: Author’s Own.\nR was then used to plot the spectral profiles for both Sentinel 2 and Landsat 8. The results are as follow.\n\n\n\n\n\n\n\n\n\nSpectral Profile generated from Sentinel 2. Source: Author’s Own.\n\n\n\n\n\n\n\n\n\nSpectral Profile generated from Landsat 8. Source: Author’s Own.\n\n\n1.2.2 Sentinel 2 or Landsat 8. Which one should I use?\n\n\n\n\n\n\n\n\n\nComparison of Landsat 8 vs. Sentinel 2 bands. Source: Ahady and Kaplan (2022)\nSentinel 2 performs better than Landsat 8 as it has better spatial resolution as seen from the pixel size column in the table above (Ahady and Kaplan 2022). It also has a better temporal resolution of ten days at the equator using one satellite, and five days using two satellites, under the assumption of cloud-free conditions (Sentinel Online, n.d.). In contrast, Landsat 8 has a temporal resolution of 16 days (Castaldi 2021).\nA study of both satellites in forest variable prediction shows that Sentinel 2 performed better than Landsat 8 in predictive accuracy, due to the former’s higher spatial resolution and additional red-edge bands (Astola et al. 2019). Sentinel 2 has four narrow bands in the red edge spectral domain which allows it to accurately study vegetation health or crop stress monitoring (Segarra et al. 2020).\nWhere Landsat 8 performs better is that it has thermal infrared sensors to measure surface temperature, a feature that Sentinel 2 does not possess (USGS, n.d.). This makes Landsat 8 suitable for studying processes such as the hydrologic cycle and climate change (Li et al. 2021). Landsat 8’s capabilities to measure land surface temperature also enables it to identify areas where the urban heat island effect is strongest in cities (Orusa and Mondino 2019).\nOverall, Sentinel-2 would be useful for looking at Land Use Land Cover (LULC) and vegetation related studies while Landsat 8 would be useful for studies related to urban heat island and climate change.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with remote sensing</span>"
+    ]
+  },
+  {
+    "objectID": "Chapter 1.html#reflection",
+    "href": "Chapter 1.html#reflection",
+    "title": "1  Getting started with remote sensing",
+    "section": "1.3 Reflection",
+    "text": "1.3 Reflection\nWhy can’t we develop a satellite that boast the best spatial, temporal, spectral and radiometric resolution, while also incorporating sensors for diverse measurements such as temperature? The limitations stem from inherent trade-offs related to the sensor designs. For example, better quality spatial and multispectral data on satellites would compete for onboard data storage space, as well as data transmission requirements to communicate with ground stations (CIESIN 1993). To improve the signal-to-noise ratio, solutions such as having a larger pixel size or accepting light from a wider spectral interval can be used, but will result in a decrease in spatial and spectral resolution respectively (Jia et al. 2022).\nGiven that no perfect satellite exists currently, it ultimately depends on one’s research needs and what to prioritise. MODIS which has 36 bands, can be used to study dust clouds because its bands 29-32 are able to track dust aerosols and it has a temporal resolution of one day (Boroughani et al. 2021). However, it has medium spatial resolution at 250m, 500m and 1000m depending on the band. . On the other hand, a study of land use changes over time probably does not require daily satellite images but perhaps at a monthly interval. However, higher spatial resolution to distinguish finer details to observe changes in the pattern would be essential. A table of some commonly used satellite sensors as below compiled shows some of the tradeoffs between the various resolutions.\n\n\n\n\n\n\n\n\n\nOverview of some commonly used satellite sensors. Source: Liang and Wang (2020)\nAnother thing that struck me is how big the remote sensing data is. Processing and saving in SNAP, followed by running the spectral signatures in R took quite a fair bit of waiting time as a result. I had flashbacks to my undergraduate days waiting in the lab for some remote sensing results to process on ENVI and ArcGIS. Hence, the Google Earth Engine segment would be something to look forward to given it runs on cloud computing resources and will be able to handle geospatial data compared to my personal device. I was also reminded of the recent AGI GeoCom 2023 on the ‘Environmental Impacts of Earth Observation in the Constellation and Cloud Computing Era’ presentation (Wilkinson et al. 2024). The central idea was that considering the substantial file size of remote sensing data and the fact that not all data is essential, it may be worthwhile to reassess the necessity of storing all available datasets. This is especially so due to the environmental implications associated with the storage of large datasets in data centers.\n\n\n\n\nAhady, Abdul Baqi, and Gordana Kaplan. 2022. “Classification Comparison of Landsat-8 and Sentinel-2 Data in Google Earth Engine, Study Case of the City of Kabul.” International Journal of Engineering and Geosciences 7 (1): 24–31. https://doi.org/10.26833/ijeg.860077.\n\n\nAstola, Heikki, Tuomas Häme, Laura Sirro, Matthieu Molinier, and Jorma Kilpi. 2019. “Comparison of Sentinel-2 and Landsat 8 Imagery for Forest Variable Prediction in Boreal Region.” Remote Sensing of Environment 223: 257–73. https://doi.org/10.1016/j.rse.2019.01.019.\n\n\nBoroughani, Mahdi, Sima Pourhashemi, Hamid Gholami, and Dimitris G Kaskaoutis. 2021. “Predicting of Dust Storm Source by Combining Remote Sensing, Statistic-Based Predictive Models and Game Theory in the Sistan Watershed, Southwestern Asia.” Journal of Arid Land 13: 1103–21. https://doi.org/10.1007/s40333-021-0023-3.\n\n\nCastaldi, Fabio. 2021. “Sentinel-2 and Landsat-8 Multi-Temporal Series to Estimate Topsoil Properties on Croplands.” Remote Sensing 13 (17). https://doi.org/10.3390/rs13173345.\n\n\nCIESIN. 1993. “Box 4-b–System Tradeoffs.” http://www.ciesin.org/docs/005-356/box4B.html#:~:tet=Sensor%20design%20requires%20tradeoffs%20among,at%20the%20expense%20of%20another.\n\n\nGIS Geography. 2023. “What Is Remote Sensing? The Definitive Guide.” https://gisgeography.com/remote-sensing-earth-observation-guide/.\n\n\nInstitute of Physics. n.d. “Different Orbits.” https://spark.iop.org/different-orbits.\n\n\nJia, Jianxin, Jinsong Chen, Xiaorou Zheng, Yueming Wang, Shanxin Guo, Haibin Sun, Changhui Jiang, et al. 2022. “Tradeoffs in the Spatial and Spectral Resolution of Airborne Hyperspectral Imaging Systems: A Crop Identification Case Study.” IEEE Transactions on Geoscience and Remote Sensing 60: 1–18. https://doi.org/10.1109/TGRS.2021.3096999.\n\n\nLi, Shenglin, Jinglei Wang, Dacheng Li, Zhongxin Ran, and Bo Yang. 2021. “Evaluation of Landsat 8-Like Land Surface Temperature by Fusing Landsat 8 and MODIS Land Surface Temperature Product.” Processes 9 (12). https://doi.org/10.3390/pr9122262.\n\n\nLiang, Shunlin, and Jindi Wang. 2020. Advanced Remote Sensing - Terrestrial Information Extraction and Applications. 2nd ed. London: Elsevier.\n\n\nLópez-Puigdollers, Dan, Gonzalo Mateo-Garcia, and Luis Gómez-Chova. 2021. “Benchmarking Deep Learning Models for Cloud Detection in Landsat-8 and Sentinel-2 Images.” Remote Sensing 13 (5). https://doi.org/10.3390/rs13050992.\n\n\nNASA. n.d. “What Is Remote Sensing?” https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing.\n\n\nOrusa, T, and E Borgogno Mondino. 2019. “Landsat 8 Thermal Data to Support Urban Management and Planning in the Climate Change Era: A Case Study in Torino Area, NW Italy.” Remote Sensing Technologies and Applications in Urban Environments IV 11157. https://doi.org/10.1117/12.2533110.\n\n\nSegarra, Joel, Maria Luisa Buchaillot, Jose Luis Araus, and Shawn C. Kefauver. 2020. “Remote Sensing for Precision Agriculture: Sentinel-2 Improved Features and Applications.” Agronomy 10 (5). https://doi.org/10.3390/agronomy10050641.\n\n\nSentinel Online. n.d. “Resolution and Swath.” https://sentinel.esa.int/web/sentinel/missions/sentinel-2/instrument-payload/resolution-and-swath.\n\n\nUSGS. n.d. “What Is Remote Sensing and What Is It Used For?” https://www.usgs.gov/faqs/what-remote-sensing-and-what-it-used.\n\n\nWilkinson, R, M M Mleczko, R J W Brewin, K J Gaston, M Mueller, J D Shutler, X Yan, and K Anderson. 2024. “Environmental Impacts of Earth Observation Data in the Constellation and Cloud Computing Era.” Science of The Total Environment 909. https://doi.org/10.1016/j.scitotenv.2023.168584.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Getting started with remote sensing</span>"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CASA0023 - Learning Diary (JTSE)",
+    "section": "",
+    "text": "Welcome!\n\n\n\n\n\n\n\n\n\nHi, my name is James and this is my learning diary for CASA0023: Remote Sensing Cities and Environments. I am a postgraduate student current undertaking a MSc in Urban Spatial Science at The Barlett Centre for Advanced Spatial Analysis (with an expected graduation date of August 2024). My other interests include hiking, drone piloting/photography, cooking and board games.\n\n\nFeel free to connect with me on LinkedIn: https://www.linkedin.com/in/james-tan-song-en-76b73418a/",
+    "crumbs": [
+      "Welcome!"
+    ]
+  }
+]
