@@ -1,0 +1,17 @@
+# Welcome! {.unnumbered}
+
+```{r echo=FALSE, out.width='35%', fig.align='left'}
+knitr::include_graphics('W0Image/IMG_3923.jpg')
+```
+
+Hi, my name is James and this is my learning diary for CASA0023: Remote Sensing Cities and Environments. I am a postgraduate student current undertaking a MSc in Urban Spatial Science at The Barlett Centre for Advanced Spatial Analysis (with an expected graduation date of August 2024). My other interests include hiking, drone piloting/photography, cycling, cooking and board games.
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/axqVmfYxNJE?si=N2Q5QgBWWSaLLk5-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+
+</iframe>
+
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/james-tan-song-en-76b73418a/) :)

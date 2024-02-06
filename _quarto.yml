@@ -1,0 +1,28 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "CASA0023 - Learning Diary (JTSE)"
+  author: "James Tan"
+  date: "01/01/2024"
+  chapters:
+      - index.qmd
+      - Chapter 1.qmd
+      - Chapter 2.qmd
+      - Chapter 3.qmd
+      - Chapter 4.qmd
+      - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+    always_allow_html: yes
+
+editor: visual
+
+

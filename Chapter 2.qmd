@@ -1,0 +1,11 @@
+# Xaringan
+
+## Xaringan Presentation - MODIS
+
+The content for week 2 is a presentation in Xaringan on MODIS. The presentation consisting of a summary, application and reflection are all included in the slides below:
+
+```{r echo = FALSE, out.width='40%'}
+xaringanExtra::embed_xaringan(
+  url = "https://jamestansongen.github.io/CASA0023_MODIS_presentation/#1",
+  ratio = "16:9")
+```
