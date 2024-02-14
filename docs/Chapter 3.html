@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CASA0023 - Learning Diary (JTSE) - 3&nbsp; Title</title>
+<title>CASA0023 - Learning Diary (JTSE) - 3&nbsp; Remote Sensing Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -69,6 +89,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -81,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Chapter 3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Title</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Chapter 3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Remote Sensing Data</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -109,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text">Welcome!</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -127,13 +176,13 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Chapter 3.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Title</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Remote Sensing Data</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Chapter 4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Title</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -152,11 +201,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">3.1</span> Summary</a></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">3.2</span> Application</a>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">3.1</span> Summary</a>
   <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><span class="header-section-number">3.2.1</span> </a></li>
+  <li><a href="#geometric-correction" id="toc-geometric-correction" class="nav-link" data-scroll-target="#geometric-correction"><span class="header-section-number">3.1.1</span> Geometric Correction</a></li>
+  <li><a href="#contrast-enhancement" id="toc-contrast-enhancement" class="nav-link" data-scroll-target="#contrast-enhancement"><span class="header-section-number">3.1.2</span> Contrast Enhancement</a></li>
   </ul></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">3.2</span> Application</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">3.3</span> Reflection</a></li>
   </ul>
 </nav>
@@ -166,7 +216,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Title</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Remote Sensing Data</span></h1>
 </div>
 
 
@@ -183,19 +233,142 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>The tl;dr of this week’s session is that remote sensing images could have issues arising from the sensor, atmosphere or other noise. This requires some correction to be undertaken although most images come processed and ready for analysis nowadays. Overall, geometric correction, atmospheric correction, orthorectification correction and radiometric calibration were covered. Furthermore, joining datasets and image enhancements were discussed. Image enhancement can improve the appearance of an image for visual inspections or for subsequent analysis. Techniques include contrast enhancement, band ratioing, principal component analysis (PCA), etc. The summary below will focus on discussing geometric correction and contrast enhancement.</p>
 <section id="summary" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">3.1</span> Summary</h2>
+<section id="geometric-correction" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="geometric-correction"><span class="header-section-number">3.1.1</span> Geometric Correction</h3>
+<p>Distortions in images could arise from a variety of sources and the implications are that the image is not representative of what is on the ground. In images, shape remain accurate directly below the sensor (nadir) but distortion occurs towards the edges of the image <span class="citation" data-cites="toutin2011">(<a href="references.html#ref-toutin2011" role="doc-biblioref">Toutin 2011</a>)</span>. The distance from the sensor to the ground is further at the edges than at the nadir resulting in a greater compression of the features.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="W3Image/geometricdistortion.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong><em>Shape preservation at the nadir and distortion towards the edges.</em></strong> <strong>Source: <span class="citation" data-cites="governmentofcanada2015">(<a href="references.html#ref-governmentofcanada2015" role="doc-biblioref">Government of Canada 2015</a>)</span>.</strong></p>
+<p>Other causes of distortion could include inconsistency in the altitude and velocity of the sensors <span class="citation" data-cites="pennstatecollegeofearthandmineralscience">(<a href="references.html#ref-pennstatecollegeofearthandmineralscience" role="doc-biblioref">Earth and Mineral Science, n.d.</a>)</span>. As the Earth rotates on its axis and satellites orbit around the Earth, this results in the image being skewed. This is due to each scan row covering an area slightly west of the preceding image.</p>
+<p>To correct this issue, Ground Control Points (GCPs) need to be identified to match known points (e.g.&nbsp;prominent landmarks, buildings, intersections) in the image with a reference dataset which could be in the form of a local map or another image.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="W3Image/GCP.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong><em>Creating ground control points to match uncorrected image to reference image prior to applying polynomial transformation.</em></strong> <strong>Source: <span class="citation" data-cites="basith2011">(<a href="references.html#ref-basith2011" role="doc-biblioref">Basith 2011</a>)</span>.</strong></p>
+<p>A geometric transformation is then applied to each pixel for rectification purpose. There are two modelling methods: 1) input to output (forward) mapping and 2) output to input (inverse) mapping <span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref">Jensen 2015</a>)</span>. In the former, pixels in the original image are transformed to have new coordinates in the reference image based on a formula created from the GCPs. However, a possible issue may arise when the transformed coordinates do not correspond with integer coordinates in the reference image and hence may have missing values. The latter of output to input (backward mapping) is able to overcome this issue. This process takes a value in the reference image, inputs it into the equation and returns a value in the original image, thus ensuring that there is a new value in the latter. As a check if the pixels between the original and reference image are aligned, the root mean squared error (RMSE) can provide an indication of the best fit. A lower RMSE is preferred with some studies suggesting a threshold of 0.5 or less <span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref">Jensen 2015</a>)</span>. Lower RMSE can be achieved by adding more ground control points. Lastly, there may be some misalignment between the original grid and new grid in the transformation process and hence there is a need for resampling of interpolating new pixel values based on the original pixel values. Resampling techniques include nearest neighbour, linear, cubic and cubic spline.</p>
+</section>
+<section id="contrast-enhancement" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="contrast-enhancement"><span class="header-section-number">3.1.2</span> Contrast Enhancement</h3>
+<p>Different surfaces (e.g.&nbsp;soil, vegetation, urban) reflect comparable amount of energy in the visible, near-infrared and middle-infrared portions of the electromagnetic spectrum <span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref">Jensen 2015</a>)</span>. As such, it remains challenging to visually distinguish between various materials. The reason for this low contrast is due to images using only brightness values between 4 and 104, thereby neglecting brightness values in the ranges of 0 and 3, and 106 and 255. Various methods to expand the range and utilise these values to increase the contrast include 1) minimum-maximum, 2) percentage linear and standard deviation and 3) piecewise linear contrast stretch.</p>
+<p>Minimum-maximum method is usually applied to remote sensing images where the distribution of the pixel values assume a normal or near normal distribution. Any pixel with a brightness value of 4 would be assigned a bright value of 0 now while any pixel with a brightness value of 105 would be given a brightness value of 255. In other words, the brightness values are now linearly distributed between 0 and 255 instead of 5 and 104 thus increasing the contrast.</p>
+<p>Percentage linear and standard deviation is similar to the minimum-maximum method where a certain percentage or standard deviation of pixels from the mean are used instead. The brightness value within these specified minimum and maximum values are now linearly distributed between 0 and 255 instead. Brightness values below the lower and above the upper bound of the percentage or standard deviation, are mapped to the minimum and maximum of the dynamic range. As such, there are more black and white pixels thus creating a larger contrast <span class="citation" data-cites="al-amri2010">(<a href="references.html#ref-al-amri2010" role="doc-biblioref">Al-amri, Kalyankar, and Khamitkar 2010</a>)</span>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="W3Image/contrastenhancement1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong><em>From top to bottom row: Original Landsat Image of Charleston, South Carolina and corresponding histogram; Minimum-maximum contrast stretch applied to image and corresponding histogram; Standard deviation contrast stretch and corresponding histogram.</em></strong> <strong>Source: <span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref">Jensen 2015</a>)</span>.</strong></p>
+<p>Piecewise linear contrast is used when the pixels do not assume a normal distribution such as assuming a bimodal or trimodal pattern. In this case, the analyst identifies breaks in the histogram of brightness values and applies different transformations to stretch the values. Piecewise linear contrast is used to exaggerate or highlight specific features in the images such as a river while making the surrounding land appear black.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="W3Image/contrastenhancement2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong><em>Piecewise linear contrast stretch used to exaggerate Savannah River and corresponding histogram.</em></strong> <strong>Source:</strong> <span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref">Jensen 2015</a>)</span><strong>.</strong></p>
+</section>
 </section>
 <section id="application" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="application"><span class="header-section-number">3.2</span> Application</h2>
-<section id="section" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="section"><span class="header-section-number">3.2.1</span> </h3>
-</section>
+<p>In this week’s practical, the focus was on image enhancements such as band ratioing, filter, texture, data fusion, and Principal Component Analysis (PCA). In band ratioing, the contrast between features are enhanced by “dividing the brightness values (digital numbers) at peaks/maxima and troughs/minima in a reflectance curve after the additive atmospheric haze and additive sensor offset have been removed” <span class="citation" data-cites="ghrefat2023">(<a href="references.html#ref-ghrefat2023" role="doc-biblioref">Ghrefat et al. 2023</a>)</span>. One common example of band ratioing is the Normalised Difference Vegetation Index (NDVI) used to examine vegetation density and health <span class="citation" data-cites="usgsa">(<a href="references.html#ref-usgsa" role="doc-biblioref">USGS, n.d.b</a>)</span>. NDVI is calculated by taking the ratio between the red (R) and near infrared (NIR) values and can be represented by the equation:</p>
+<p>NDVI = <span class="math inline">\(\frac{NIR - Red}{NIR+Red}\)</span></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="W3Image/ndviC.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong><em>From left to right: all NDVI values for Cape Town, South Africa; NDVI values above 0.20 for Cape Town, South Africa.</em></strong> <strong>Source: Author’s Own.</strong></p>
+<p>Numerous studies have used NDVI to study vegetation which includes the use of NDVI to monitor vegetation dynamics for Africa between 1982 and 1983 <span class="citation" data-cites="tucker1985">(<a href="references.html#ref-tucker1985" role="doc-biblioref">Tucker, Townshend, and Goff 1985</a>)</span>. The study examined how phenomenon such as the movement of the Intertropical Convergence Zone or the 1983 drought in the Sahel influenced vegetation density and productivity given these changes in rainfall.</p>
+<p>However, a limitation of NDVI is the saturation effect for densely vegetated surfaces such as forested grounds <span class="citation" data-cites="jiang2007">(<a href="references.html#ref-jiang2007" role="doc-biblioref">Jiang et al. 2007</a>)</span>. Other indices such as Enhanced Vegetation Index (EVI) are suggested to overcome this drawback and reduce background noise and atmospheric interference. Overall, this means that the signals observed is primarily due to vegetation, making it more accurate to visually assess plant health.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="W3Image/SR-NDVI-EVI.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong><em>From left to right: Landsat Surface Reflectance; NDVI derived image: EVI derived image.</em></strong> <strong>Source:</strong> <span class="citation" data-cites="usgsa">USGS (<a href="references.html#ref-usgsb" role="doc-biblioref">n.d.a</a>)</span></p>
 </section>
 <section id="reflection" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> Reflection</h2>
+<p>This week’s lecture was content heavy with the different types of factors that can influence the quality of images, methods of corrections, along with image enhancement techniques. Even though many images come pre-processed nowadays, the lecture was still useful in gaining an appreciation for the processes involved before an image is ready for analysis. In the broader scheme, it is important to question and understand the assumptions underlying data processing, as biasness could be introduced.</p>
+<p>Furthermore, there could be cases where the images are not ready for analysis and require some additional processing. This is quite likely given that I sometimes use my drone for photography and I am hoping to explore what kind of analysis I can do with the images in the future.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="W3Image/dji_fly_20230701_130510_265_1688197880870_photo_optimized.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong><em>Pulau Besar in Malaysia taken from Dji Mini 2.</em></strong> <strong>Source: Author’s Own.</strong></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-al-amri2010" class="csl-entry" role="listitem">
+Al-amri, Salem Saleh, N. V. Kalyankar, and S. D. Khamitkar. 2010. <span>“Contrast Stretching Enhancement in Remote Sensing Image.”</span> <em>International Journal of Computer Science Issues (IJCSI)</em> 7 (2): 26–29.
+</div>
+<div id="ref-basith2011" class="csl-entry" role="listitem">
+Basith, Abdul. 2011. <span>“Landslide Susceptibility Modelling Under Environmental Changes: A Case Study of Cameron Highlands, Malaysia.”</span> PhD thesis, Perak. <a href="https://www.researchgate.net/publication/320710942_LANDSLIDE_SUSCEPTIBILITY_MODELLING_UNDER_ENVIRONMENTAL_CHANGES_A_CASE_STUDY_OF_CAMERON_HIGHLANDS_MALAYSIA">https://www.researchgate.net/publication/320710942_LANDSLIDE_SUSCEPTIBILITY_MODELLING_UNDER_ENVIRONMENTAL_CHANGES_A_CASE_STUDY_OF_CAMERON_HIGHLANDS_MALAYSIA</a>.
+</div>
+<div id="ref-pennstatecollegeofearthandmineralscience" class="csl-entry" role="listitem">
+Earth, Penn State College of, and Mineral Science. n.d. <span>“14. Image Correction.”</span> <a href="https://www.e-education.psu.edu/natureofgeoinfo/node/1896">https://www.e-education.psu.edu/natureofgeoinfo/node/1896</a>.
+</div>
+<div id="ref-ghrefat2023" class="csl-entry" role="listitem">
+Ghrefat, Habes, Muheeb Awawdeh, Fares Howari, and Abdulla Al-Rawabdeh. 2023. <span>“Chapter 12 - Mineral Exploration Using Multispectral and Hyperspectral Remote Sensing Data.”</span> In, edited by Nikolaos Stathopoulos, Andreas Tsatsaris, and Kleomenis Kalogeropoulos, 197–222. Earth Observation. Elsevier.
+</div>
+<div id="ref-governmentofcanada2015" class="csl-entry" role="listitem">
+Government of Canada. 2015. <span>“Geometric Distortion in Imagery.”</span> <a href="https://natural-resources.canada.ca/maps-tools-and-publications/satellite-imagery-and-air-photos/tutorial-fundamentals-remote-sensing/satellites-and-sensors/geometric-distortion-imagery/9401">https://natural-resources.canada.ca/maps-tools-and-publications/satellite-imagery-and-air-photos/tutorial-fundamentals-remote-sensing/satellites-and-sensors/geometric-distortion-imagery/9401</a>.
+</div>
+<div id="ref-jensen2015" class="csl-entry" role="listitem">
+Jensen, J R. 2015. <em>Introductory Digital Image Processing: A Remote Sensing Perspective</em>. 4th ed. Upper Saddle River.: Prentice Hall Press.
+</div>
+<div id="ref-jiang2007" class="csl-entry" role="listitem">
+Jiang, Zhangyan, Alfredo Huete, Youngwook Kim, and K. Didan. 2007. <span>“2-Band Enhanced Vegetation Index Without a Blue Band and Its Application to AVHRR Data.”</span> <em>Proceedings of SPIE - The International Society for Optical Engineering</em> 6679. <a href="https://doi.org/10.1117/12.734933">https://doi.org/10.1117/12.734933</a>.
+</div>
+<div id="ref-toutin2011" class="csl-entry" role="listitem">
+Toutin, Thierry. 2011. <span>“State-of-the-Art of Geometric Correction of Remote Sensing Data: A Data Fusion Perspective.”</span> <em>International Journal of Image and Data Fusion</em> 2 (1). <a href="https://doi.org/10.1080/19479832.2010.539188">https://doi.org/10.1080/19479832.2010.539188</a>.
+</div>
+<div id="ref-tucker1985" class="csl-entry" role="listitem">
+Tucker, Compton J, John R G Townshend, and Thomas E Goff. 1985. <span>“African Land-Cover Classification Using Satellite Data.”</span> <em>Science</em> 227 (4685). <a href="https://doi.org/10.1126/science.227.4685.369">https://doi.org/10.1126/science.227.4685.369</a>.
+</div>
+<div id="ref-usgsb" class="csl-entry" role="listitem">
+USGS. n.d.a. <span>“Landsat Enhanced Vegetation Index.”</span> <a href="https://www.usgs.gov/landsat-missions/landsat-enhanced-vegetation-index">https://www.usgs.gov/landsat-missions/landsat-enhanced-vegetation-index</a>.
+</div>
+<div id="ref-usgsa" class="csl-entry" role="listitem">
+———. n.d.b. <span>“Landsat Normalized Difference Vegetation Index.”</span> <a href="https://www.usgs.gov/landsat-missions/landsat-normalized-difference-vegetation-index">https://www.usgs.gov/landsat-missions/landsat-normalized-difference-vegetation-index</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -593,8 +766,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Chapter 4.html" class="pagination-link" aria-label="<span class='chapter-number'>4</span>&nbsp; <span class='chapter-title'>Title</span>">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Title</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Chapter 4.html" class="pagination-link" aria-label="<span class='chapter-number'>4</span>&nbsp; <span class='chapter-title'>Policy</span>">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Policy</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
