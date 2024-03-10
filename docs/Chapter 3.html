@@ -187,6 +187,24 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./Chapter 5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter 6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Chapter 7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -248,7 +266,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p><strong><em>Shape preservation at the nadir and distortion towards the edges.</em></strong> <strong>Source: <span class="citation" data-cites="governmentofcanada2015">(<a href="references.html#ref-governmentofcanada2015" role="doc-biblioref">Government of Canada 2015</a>)</span>.</strong></p>
+<p><strong><em>Shape preservation at the nadir and distortion towards the edges.</em></strong> <strong>Source:</strong> <span class="citation" data-cites="governmentofcanada2015">Government of Canada (<a href="references.html#ref-governmentofcanada2015" role="doc-biblioref">2015</a>)</span></p>
 <p>Other causes of distortion could include inconsistency in the altitude and velocity of the sensors <span class="citation" data-cites="pennstatecollegeofearthandmineralscience">(<a href="references.html#ref-pennstatecollegeofearthandmineralscience" role="doc-biblioref">Earth and Mineral Science, n.d.</a>)</span>. As the Earth rotates on its axis and satellites orbit around the Earth, this results in the image being skewed. This is due to each scan row covering an area slightly west of the preceding image.</p>
 <p>To correct this issue, Ground Control Points (GCPs) need to be identified to match known points (e.g.&nbsp;prominent landmarks, buildings, intersections) in the image with a reference dataset which could be in the form of a local map or another image.</p>
 <div class="cell" data-layout-align="center">
@@ -260,7 +278,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p><strong><em>Creating ground control points to match uncorrected image to reference image prior to applying polynomial transformation.</em></strong> <strong>Source: <span class="citation" data-cites="basith2011">(<a href="references.html#ref-basith2011" role="doc-biblioref">Basith 2011</a>)</span>.</strong></p>
+<p><strong><em>Creating ground control points to match uncorrected image to reference image prior to applying polynomial transformation.</em></strong> <strong>Source:</strong> <span class="citation" data-cites="basith2011">Basith (<a href="references.html#ref-basith2011" role="doc-biblioref">2011</a>)</span></p>
 <p>A geometric transformation is then applied to each pixel for rectification purpose. There are two modelling methods: 1) input to output (forward) mapping and 2) output to input (inverse) mapping <span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref">Jensen 2015</a>)</span>. In the former, pixels in the original image are transformed to have new coordinates in the reference image based on a formula created from the GCPs. However, a possible issue may arise when the transformed coordinates do not correspond with integer coordinates in the reference image and hence may have missing values. The latter of output to input (backward mapping) is able to overcome this issue. This process takes a value in the reference image, inputs it into the equation and returns a value in the original image, thus ensuring that there is a new value in the latter. As a check if the pixels between the original and reference image are aligned, the root mean squared error (RMSE) can provide an indication of the best fit. A lower RMSE is preferred with some studies suggesting a threshold of 0.5 or less <span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref">Jensen 2015</a>)</span>. Lower RMSE can be achieved by adding more ground control points. Lastly, there may be some misalignment between the original grid and new grid in the transformation process and hence there is a need for resampling of interpolating new pixel values based on the original pixel values. Resampling techniques include nearest neighbour, linear, cubic and cubic spline.</p>
 </section>
 <section id="contrast-enhancement" class="level3" data-number="3.1.2">
@@ -277,7 +295,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p><strong><em>From top to bottom row: Original Landsat Image of Charleston, South Carolina and corresponding histogram; Minimum-maximum contrast stretch applied to image and corresponding histogram; Standard deviation contrast stretch and corresponding histogram.</em></strong> <strong>Source: <span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref">Jensen 2015</a>)</span>.</strong></p>
+<p><strong><em>From top to bottom row: Original Landsat Image of Charleston, South Carolina and corresponding histogram; Minimum-maximum contrast stretch applied to image and corresponding histogram; Standard deviation contrast stretch and corresponding histogram.</em></strong> <strong>Source:</strong> <span class="citation" data-cites="jensen2015">Jensen (<a href="references.html#ref-jensen2015" role="doc-biblioref">2015</a>)</span></p>
 <p>Piecewise linear contrast is used when the pixels do not assume a normal distribution such as assuming a bimodal or trimodal pattern. In this case, the analyst identifies breaks in the histogram of brightness values and applies different transformations to stretch the values. Piecewise linear contrast is used to exaggerate or highlight specific features in the images such as a river while making the surrounding land appear black.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -288,7 +306,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p><strong><em>Piecewise linear contrast stretch used to exaggerate Savannah River and corresponding histogram.</em></strong> <strong>Source:</strong> <span class="citation" data-cites="jensen2015">(<a href="references.html#ref-jensen2015" role="doc-biblioref">Jensen 2015</a>)</span><strong>.</strong></p>
+<p><strong><em>Piecewise linear contrast stretch used to exaggerate Savannah River and corresponding histogram.</em></strong> <strong>Source:</strong> <span class="citation" data-cites="jensen2015">Jensen (<a href="references.html#ref-jensen2015" role="doc-biblioref">2015</a>)</span></p>
 </section>
 </section>
 <section id="application" class="level2" data-number="3.2">
@@ -304,7 +322,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p><strong><em>From left to right: all NDVI values for Cape Town, South Africa; NDVI values above 0.20 for Cape Town, South Africa.</em></strong> <strong>Source: Author’s Own.</strong></p>
+<p><strong><em>From left to right: all NDVI values for Cape Town, South Africa; NDVI values above 0.20 for Cape Town, South Africa.</em></strong> <strong>Source:</strong> Author’s Own.</p>
 <p>Numerous studies have used NDVI to study vegetation which includes the use of NDVI to monitor vegetation dynamics for Africa between 1982 and 1983 <span class="citation" data-cites="tucker1985">(<a href="references.html#ref-tucker1985" role="doc-biblioref">Tucker, Townshend, and Goff 1985</a>)</span>. The study examined how phenomenon such as the movement of the Intertropical Convergence Zone or the 1983 drought in the Sahel influenced vegetation density and productivity given these changes in rainfall.</p>
 <p>However, a limitation of NDVI is the saturation effect for densely vegetated surfaces such as forested grounds <span class="citation" data-cites="jiang2007">(<a href="references.html#ref-jiang2007" role="doc-biblioref">Jiang et al. 2007</a>)</span>. Other indices such as Enhanced Vegetation Index (EVI) are suggested to overcome this drawback and reduce background noise and atmospheric interference. Overall, this means that the signals observed is primarily due to vegetation, making it more accurate to visually assess plant health.</p>
 <div class="cell" data-layout-align="center">
@@ -316,7 +334,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p><strong><em>From left to right: Landsat Surface Reflectance; NDVI derived image: EVI derived image.</em></strong> <strong>Source:</strong> <span class="citation" data-cites="usgsa">USGS (<a href="references.html#ref-usgsb" role="doc-biblioref">n.d.a</a>)</span></p>
+<p><strong><em>From left to right: Landsat Surface Reflectance; NDVI derived image: EVI derived image.</em></strong> <strong>Source:</strong> <span class="citation" data-cites="usgsa">USGS (<a href="references.html#ref-usgsa" role="doc-biblioref">n.d.b</a>)</span><strong>;</strong> <span class="citation" data-cites="usgsb">USGS (<a href="references.html#ref-usgsb" role="doc-biblioref">n.d.a</a>)</span></p>
 </section>
 <section id="reflection" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> Reflection</h2>
@@ -331,7 +349,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p><strong><em>Pulau Besar in Malaysia taken from Dji Mini 2.</em></strong> <strong>Source: Author’s Own.</strong></p>
+<p><strong><em>Pulau Besar in Malaysia taken from Dji Mini 2.</em></strong> <strong>Source:</strong> Author’s Own.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">

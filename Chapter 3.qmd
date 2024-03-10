@@ -12,7 +12,7 @@ Distortions in images could arise from a variety of sources and the implications
 knitr::include_graphics('W3Image/geometricdistortion.png')
 ```
 
-***Shape preservation at the nadir and distortion towards the edges.*** **Source: [@governmentofcanada2015].**
+***Shape preservation at the nadir and distortion towards the edges.*** **Source:** @governmentofcanada2015
 
 Other causes of distortion could include inconsistency in the altitude and velocity of the sensors [@pennstatecollegeofearthandmineralscience]. As the Earth rotates on its axis and satellites orbit around the Earth, this results in the image being skewed. This is due to each scan row covering an area slightly west of the preceding image.
 
@@ -22,7 +22,7 @@ To correct this issue, Ground Control Points (GCPs) need to be identified to mat
 knitr::include_graphics('W3Image/GCP.png')
 ```
 
-***Creating ground control points to match uncorrected image to reference image prior to applying polynomial transformation.*** **Source: [@basith2011].**
+***Creating ground control points to match uncorrected image to reference image prior to applying polynomial transformation.*** **Source:** @basith2011
 
 A geometric transformation is then applied to each pixel for rectification purpose. There are two modelling methods: 1) input to output (forward) mapping and 2) output to input (inverse) mapping [@jensen2015]. In the former, pixels in the original image are transformed to have new coordinates in the reference image based on a formula created from the GCPs. However, a possible issue may arise when the transformed coordinates do not correspond with integer coordinates in the reference image and hence may have missing values. The latter of output to input (backward mapping) is able to overcome this issue. This process takes a value in the reference image, inputs it into the equation and returns a value in the original image, thus ensuring that there is a new value in the latter. As a check if the pixels between the original and reference image are aligned, the root mean squared error (RMSE) can provide an indication of the best fit. A lower RMSE is preferred with some studies suggesting a threshold of 0.5 or less [@jensen2015]. Lower RMSE can be achieved by adding more ground control points. Lastly, there may be some misalignment between the original grid and new grid in the transformation process and hence there is a need for resampling of interpolating new pixel values based on the original pixel values. Resampling techniques include nearest neighbour, linear, cubic and cubic spline.
 
@@ -38,7 +38,7 @@ Percentage linear and standard deviation is similar to the minimum-maximum metho
 knitr::include_graphics('W3Image/contrastenhancement1.png')
 ```
 
-***From top to bottom row: Original Landsat Image of Charleston, South Carolina and corresponding histogram; Minimum-maximum contrast stretch applied to image and corresponding histogram; Standard deviation contrast stretch and corresponding histogram.*** **Source: [@jensen2015].**
+***From top to bottom row: Original Landsat Image of Charleston, South Carolina and corresponding histogram; Minimum-maximum contrast stretch applied to image and corresponding histogram; Standard deviation contrast stretch and corresponding histogram.*** **Source:** @jensen2015
 
 Piecewise linear contrast is used when the pixels do not assume a normal distribution such as assuming a bimodal or trimodal pattern. In this case, the analyst identifies breaks in the histogram of brightness values and applies different transformations to stretch the values. Piecewise linear contrast is used to exaggerate or highlight specific features in the images such as a river while making the surrounding land appear black.
 
@@ -46,7 +46,7 @@ Piecewise linear contrast is used when the pixels do not assume a normal distrib
 knitr::include_graphics('W3Image/contrastenhancement2.png')
 ```
 
-***Piecewise linear contrast stretch used to exaggerate Savannah River and corresponding histogram.*** **Source:** [@jensen2015]**.**
+***Piecewise linear contrast stretch used to exaggerate Savannah River and corresponding histogram.*** **Source:** @jensen2015
 
 ## Application
 
@@ -58,7 +58,7 @@ NDVI = $\frac{NIR - Red}{NIR+Red}$
 knitr::include_graphics('W3Image/ndviC.png')
 ```
 
-***From left to right: all NDVI values for Cape Town, South Africa; NDVI values above 0.20 for Cape Town, South Africa.*** **Source: Author's Own.**
+***From left to right: all NDVI values for Cape Town, South Africa; NDVI values above 0.20 for Cape Town, South Africa.*** **Source:** Author's Own.
 
 Numerous studies have used NDVI to study vegetation which includes the use of NDVI to monitor vegetation dynamics for Africa between 1982 and 1983 [@tucker1985]. The study examined how phenomenon such as the movement of the Intertropical Convergence Zone or the 1983 drought in the Sahel influenced vegetation density and productivity given these changes in rainfall.
 
@@ -68,7 +68,7 @@ However, a limitation of NDVI is the saturation effect for densely vegetated sur
 knitr::include_graphics('W3Image/SR-NDVI-EVI.png')
 ```
 
-***From left to right: Landsat Surface Reflectance; NDVI derived image: EVI derived image.*** **Source:** [@usgsa**; @usgsb**]
+***From left to right: Landsat Surface Reflectance; NDVI derived image: EVI derived image.*** **Source:** @usgsa**;** @usgsb
 
 ## Reflection
 
@@ -80,4 +80,4 @@ Furthermore, there could be cases where the images are not ready for analysis an
 knitr::include_graphics('W3Image/dji_fly_20230701_130510_265_1688197880870_photo_optimized.jpg')
 ```
 
-***Pulau Besar in Malaysia taken from Dji Mini 2.*** **Source: Author's Own.**
+***Pulau Besar in Malaysia taken from Dji Mini 2.*** **Source:** Author's Own.

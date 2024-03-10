@@ -12,7 +12,7 @@ The city’s stormwater planning approach aims for projects that improve water q
 knitr::include_graphics('W4Image/LAStormwaterProjects.png')
 ```
 
-***Summary of Stormwater Projects as detailed in the One Water LA 2040 Plan Summary Report.*** **Source:** [@cityoflosangeles2018]
+***Summary of Stormwater Projects as detailed in the One Water LA 2040 Plan Summary Report.*** **Source:** @cityoflosangeles2018
 
 However, critics argue that Los Angeles’ water management strategy overly relies on grey infrastructure to quickly flush water away, neglecting the potential benefits of green infrastructure projects to absorb and store water [@theguardian2023] as green infrastructure are seen to be 50% more cost effective than grey infrastructure [@worldeconomicforum2022]. In Los Angeles, even when green infrastructure projects are proposed, there are further concerns that they may not be equitably distributed or planned in locations with the ideal conditions for groundwater infiltration [@uclainstituteoftheenvironmentandsustainability2022].
 
@@ -26,7 +26,7 @@ In 2023, Arup released the Global Sponge Cities Snapshot report to examine how �
 knitr::include_graphics('W4Image/ArupSponge.png')
 ```
 
-***Arup’s methodology to calculate the city’s sponge snapshot.*** **Source: [@arup2023]**
+***Arup’s methodology to calculate the city’s sponge snapshot.*** **Source:** @arup2023
 
 To reproduce such a snapshot, the following steps are required:
 
@@ -38,7 +38,7 @@ Sentinel 2 or other remote sensing images can be obtained for the metropolitan a
 knitr::include_graphics('W4Image/LATimelapseSentinel2.gif')
 ```
 
-***Timelapse of Sentinel 2 images of Los Angeles.*** **Source:** [@sentinelhub]
+***Timelapse of Sentinel 2 images of Los Angeles.*** **Source:** @sentinelhub
 
 [Step 2: Soil types and vegetation]{.underline}
 

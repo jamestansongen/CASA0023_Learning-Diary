@@ -8,7 +8,7 @@
 :::
 
 
-***What is Remote Sensing?*** **Source: @gisgeography2023**
+***What is Remote Sensing?*** **Source:** @gisgeography2023
 
 ## Summary
 
@@ -32,7 +32,7 @@ NASA: Remote sensing is acquiring of information from a distance. NASA observes 
 :::
 
 
-***Campus of the University of Maryland at College Park at 1m, 10m, 30m and 250m spatial resolution.*** **Source: @liang2020**
+***Campus of the University of Maryland at College Park at 1m, 10m, 30m and 250m spatial resolution.*** **Source:** @liang2020
 
 2.  Temporal Resolution: frequency at which a satellite revisits the same observation area [@nasa]. Geostationary satellites orbit at the same rate of the earth and focus on the same observation area resulting in a higher temporal resolution. In contrast, polar orbiting satellites orbit around the entire Earth and able to observe the different parts of the world, at the cost of temporal resolution which could vary from 1 to 16 days.
 
@@ -44,7 +44,7 @@ NASA: Remote sensing is acquiring of information from a distance. NASA observes 
 :::
 
 
-***Geostationary and Polar Orbiting Satellites.*** **Source: @instituteofphysics**
+***Geostationary and Polar Orbiting Satellites.*** **Source:** @instituteofphysics
 
 3.  Spectral Resolution: the number and width of spectral bands in a sensor system [@liang2020]. Sensors which have more bands with narrower wavelengths, have finer spectral resolution. This would allow greater distinction to be made between various features such as rock or vegetation types.
 
@@ -56,7 +56,7 @@ NASA: Remote sensing is acquiring of information from a distance. NASA observes 
 :::
 
 
-***Comparison of spectral bands between Sentinel-2 and Landsat-8 which have similar characteristics for the coastal aerosol (440 nm), visible (490-800 nm) and short-wave infrared or SWIR (1300-2400 nm) spectral bands.*** **Source: @lopez-puigdollersBenchmarkingDeepLearning2021**
+***Comparison of spectral bands between Sentinel-2 and Landsat-8 which have similar characteristics for the coastal aerosol (440 nm), visible (490-800 nm) and short-wave infrared or SWIR (1300-2400 nm) spectral bands.*** **Source:** @lopez-puigdollersBenchmarkingDeepLearning2021
 
 4.  Radiometric Resolution: amount of information in each pixel [@nasa]. Sensors with higher radiometric resolution are more sensitive and able to detect subtle differences in electromagnetic energy. This allows for features to be distinguished better such as variations in vegetation or water colour.
 
@@ -68,7 +68,7 @@ NASA: Remote sensing is acquiring of information from a distance. NASA observes 
 :::
 
 
-***Campus of the University of Maryland at College Park at (A) 8 bits (2^8^ or 256 discrete shades of grey) , (B) 4 bits (2^4^ or 16 discrete shades of grey), (C) 2 bits (2^2^ or 4 discrete shades of grey) and (D) 1 bit (2^1^ or 2 discrete shades of grey) radiometric resolution.*** **Source: @liang2020**
+***Campus of the University of Maryland at College Park at (A) 8 bits (2^8^ or 256 discrete shades of grey) , (B) 4 bits (2^4^ or 16 discrete shades of grey), (C) 2 bits (2^2^ or 4 discrete shades of grey) and (D) 1 bit (2^1^ or 2 discrete shades of grey) radiometric resolution.*** **Source:** @liang2020
 
 ## Application
 
@@ -84,7 +84,7 @@ As part of our first practical for remote sensing, we had to select a city of ou
 :::
 
 
-***Landsat 8 image of Los Angeles with Points of Interest selected in SNAP.*** **Source: Author's Own.**
+***Landsat 8 image of Los Angeles with Points of Interest selected in SNAP.*** **Source:** Author's Own.
 
 R was then used to plot the spectral profiles for both Sentinel 2 and Landsat 8. The results are as follow.
 
@@ -96,7 +96,7 @@ R was then used to plot the spectral profiles for both Sentinel 2 and Landsat 8.
 :::
 
 
-***Spectral Profile generated from Sentinel 2.*** **Source: Author's Own.**
+***Spectral Profile generated from Sentinel 2.*** **Source:** Author's Own.
 
 
 ::: {.cell layout-align="center"}
@@ -106,7 +106,7 @@ R was then used to plot the spectral profiles for both Sentinel 2 and Landsat 8.
 :::
 
 
-***Spectral Profile generated from Landsat 8.*** **Source: Author's Own.**
+***Spectral Profile generated from Landsat 8.*** **Source:** Author's Own.
 
 ### Sentinel 2 or Landsat 8. Which one should I use?
 
@@ -118,7 +118,7 @@ R was then used to plot the spectral profiles for both Sentinel 2 and Landsat 8.
 :::
 
 
-***Comparison of Landsat 8 vs. Sentinel 2 bands.*** **Source: @ahadyClassificationComparisonLandsat82022**
+***Comparison of Landsat 8 vs. Sentinel 2 bands.*** **Source:** @ahadyClassificationComparisonLandsat82022
 
 Sentinel 2 performs better than Landsat 8 as it has better spatial resolution as seen from the pixel size column in the table above [@ahadyClassificationComparisonLandsat82022]. It also has a better temporal resolution of ten days at the equator using one satellite, and five days using two satellites, under the assumption of cloud-free conditions [@sentinelonline]. In contrast, Landsat 8 has a temporal resolution of 16 days [@castaldiSentinel2Landsat8MultiTemporal2021].
 
@@ -142,7 +142,7 @@ Given that no perfect satellite exists currently, it ultimately depends on one�
 :::
 
 
-***Overview of some commonly used satellite sensors.*** **Source: @liang2020**
+***Overview of some commonly used satellite sensors.*** **Source:** @liang2020
 
 Another thing that struck me is how big the remote sensing data is. Processing and saving in SNAP, followed by running the spectral signatures in R took quite a fair bit of waiting time as a result. I had flashbacks to my undergraduate days waiting in the lab for some remote sensing results to process on ENVI and ArcGIS. Hence, the Google Earth Engine segment would be something to look forward to given it runs on cloud computing resources and will be able to handle geospatial data compared to my personal device. I was also reminded of the recent AGI GeoCom 2023 on the ‘Environmental Impacts of Earth Observation in the Constellation and Cloud Computing Era’ presentation [@wilkinsonEnvironmentalImpactsEarth2024]. The central idea was that considering the substantial file size of remote sensing data and the fact that not all data is essential, it may be worthwhile to reassess the necessity of storing all available datasets. This is especially so due to the environmental implications associated with the storage of large datasets in data centers.
 
