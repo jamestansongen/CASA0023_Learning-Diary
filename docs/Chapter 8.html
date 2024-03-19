@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CASA0023 - Learning Diary (JTSE) - 6&nbsp; Classification I</title>
+<title>CASA0023 - Learning Diary (JTSE) - 8&nbsp; Synthetic Aperture Radar (SAR)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,8 +50,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Chapter 7.html" rel="next">
-<link href="./Chapter 5.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./Chapter 7.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -101,7 +101,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Chapter 6.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Chapter 8.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Synthetic Aperture Radar (SAR)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -164,7 +164,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Chapter 6.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Chapter 6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></span></a>
   </div>
 </li>
@@ -176,7 +176,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Chapter 8.html" class="sidebar-item-text sidebar-link">
+  <a href="./Chapter 8.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Synthetic Aperture Radar (SAR)</span></span></a>
   </div>
 </li>
@@ -196,9 +196,9 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">6.1</span> Summary</a></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">6.2</span> Application</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">6.3</span> Reflection</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">8.1</span> Summary</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">8.2</span> Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">8.3</span> Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -207,7 +207,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Classification I</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Synthetic Aperture Radar (SAR)</span></h1>
 </div>
 
 
@@ -224,125 +224,128 @@ div.csl-indent {
 </header>
 
 
-<p>In the first of a two-part lecture series on classification, we covered how classified data is used and how to classify remotely sensed data. This included machine learning concepts related to Classification and Regression Trees (CART), Random Forests, Support Vector Machine (SVM) and Overfitting. In terms of classification processes, we covered supervised (e.g.&nbsp;maximum likelihood, parallelepiped, nearest neighbour) vs.&nbsp;unsupervised classification (k-means, ISODATA).</p>
-<section id="summary" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1</span> Summary</h2>
-<p>CART refers to “Decision Tree algorithms that can be used for classification or regression predictive modeling problems” <span class="citation" data-cites="brownlee2020">(<a href="references.html#ref-brownlee2020" role="doc-biblioref">Brownlee 2020</a>)</span>. CART is particularly relevant for remote sensing in classifying pixels into same groups based on their similarities. While CART shares some similarities with clustering analysis in terms of their objectives, it differs in that CART focuses more on predicting future datasets rather than explaining the data <span class="citation" data-cites="bakker2015">(<a href="references.html#ref-bakker2015" role="doc-biblioref">Bakker 2015</a>)</span>. CART is also hierarchical, as it is top-down and splits pixels into their groups, while trying to minimize the Gini impurity for categorical data, which measures the likelihood of new data being misclassified if it was labeled randomly and independently <span class="citation" data-cites="karabiber">(<a href="references.html#ref-karabiber" role="doc-biblioref">Karabiber, n.d.</a>)</span>, or mean squared error (MSE) for continuous data, which measures the accuracy of the tree <span class="citation" data-cites="minitab">(<a href="references.html#ref-minitab" role="doc-biblioref">Minitab, n.d.</a>)</span>. This process continues until a specific stop condition has been met, such as max tree depth or minimal instances in a node, thus producing a decision-tree structure <span class="citation" data-cites="yadav2019">(<a href="references.html#ref-yadav2019" role="doc-biblioref">Yadav 2019</a>)</span>. On the other hand, clustering is agglomerative in moving from the bottom-up in sorting pixels into a set of clusters <span class="citation" data-cites="bakker2015">(<a href="references.html#ref-bakker2015" role="doc-biblioref">Bakker 2015</a>)</span>. An example of the decision tree can be seen below, starting from the root node and splitting into internal nodes until it reaches the lowest level which is the leaf node.</p>
+<p>In the final week of content, we covered Synthetic Aperture Radar (SAR) fundamentals such as polarisation, amplitutde, phase, Interferometric Synthetic Aperture Radar (InSAR) and Differential Interferometric Synthetic Aperture Radar (DInSAR). We also covered change detection and the use of t-test to observe if such changes are significant.</p>
+<section id="summary" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.1</span> Summary</h2>
+<p>There are two types of sensors: passive and active <span class="citation" data-cites="gisgeography2015">(<a href="references.html#ref-gisgeography2015" role="doc-biblioref">GIS Geography 2015</a>)</span>. Passive sensors measure electromagnetic radiation from the sun that is reflected by the earth. Passive sensors are present on Landsat and MODIS satellites. On the other hand, active sensors have their own energy source where they actively emit a pulse and measure the signal that is reflected from the earth. An example of an active sensor is Synthetic Aperture Radar (SAR).</p>
+<p>SAR obtains its name from combining a sequence of images from a shorter antenna to provide an image with higher spatial resolution <span class="citation" data-cites="nasa2020">(<a href="references.html#ref-nasa2020" role="doc-biblioref">NASA 2020a</a>)</span>. The spatial resolution of data is dependent on the ratio of the sensor wavelength to the length of the sensor’s antenna (ibid). However, it is unfeasible to have a long antenna in space, thus leading to the above solution to ‘synthesize’ a long antenna.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="W7Image/CARTClassificationAndRegressionTree.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+<p><img src="W9Image/SAR.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:75.0%"></p>
 </figure>
 </div>
 </div>
 </div>
-<p><strong><em>CART Decision Tree Concept.</em></strong> <strong>Source:</strong> <span class="citation" data-cites="geeksforgeeks2023">GeeksforGeeks (<a href="references.html#ref-geeksforgeeks2023" role="doc-biblioref">2023</a>)</span></p>
-<p>An example of the classification tree in remote sensing is shown below where B4 (NIR) is used initially for splitting before being split by B2, followed by other bands. This allows for classification of different land use land cover and the leaf nodes are discrete values of land use types such as agriculture, less vs.&nbsp;dense built up areas, etc.</p>
+<p><strong><em>The radar is continuously in motion and covers an area on the ground based on the wavelength and antenna dimensions. A continuous stream of pulse is sent to the ground and reported back such that any point on the ground is sampled numerous times.</em></strong> <strong>Source:</strong>&nbsp;<span class="citation" data-cites="californiainstituteoftechnology">California Institute of Technology (<a href="references.html#ref-californiainstituteoftechnology" role="doc-biblioref">n.d.</a>)</span></p>
+<p>The different wavelength for SAR determines its interaction with the earth’s surface and its capability to penetrate into a medium. An X-band with a shorter wavelength is unlikely to penetrate through thick vegetation and hence mainly interacts with the tree canopy whereas an L band is able to penetrate through and allow for backscattering from the branches and trunks below. A summary of the bands, wavelengths and applications of SAR are as follow:</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="W7Image/classificationtree.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+<p><img src="W9Image/SARsummary.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
 </div>
-<p><strong><em>Classification Tree of Remote Sensing Image.</em></strong> <strong>Source:</strong> <span class="citation" data-cites="sharma2013">(<a href="references.html#ref-sharma2013" role="doc-biblioref">Sharma, Ghosh, and JOSHI 2013</a>)</span></p>
-<p>An example of the regression tree is shown below where elevation, followed by understory cover, stand age, tree height, slope, aspect are used to calculate the percentage or burnt severity of forest areas. Compared to the classification tree, the leaf nodes would take the continuous values instead.</p>
+<p><strong><em>Summary of bands, wavelengths and applications of SAR.</em></strong> <strong>Source:</strong> <span class="citation" data-cites="nasa2020">NASA (<a href="references.html#ref-nasa2020" role="doc-biblioref">2020a</a>)</span></p>
+<p>Besides wavelengths, another consideration is polarisation which refers to “the orientation of the plane in which the transmitted electromagnetic wave oscillates” <span class="citation" data-cites="nasa2020">(<a href="references.html#ref-nasa2020" role="doc-biblioref">NASA 2020a</a>)</span>. SAR sensors can transmit signals in the horizontal (H) or vertical (V) polarisation and likewise receive them in either the horizontal (H) or vertical (V). As different surfaces are more sensitive or respond differently to the polarisations (VV, VH, HV, HH), analysing the signal strength in these polarisations can provide insight into the structure of the observed surface.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="W7Image/regressiontree.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+<p><img src="W9Image/SARscattering.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
 </div>
-<p><strong><em>Regression Tree of Remote Sensing Image.</em></strong> <strong>Source:</strong> <span class="citation" data-cites="wu2013">Wu et al. (<a href="references.html#ref-wu2013" role="doc-biblioref">2013</a>)</span></p>
-<p>The advantages of CART include that the algorithm assists in the splitting and is easy to interpret from the flowchart. It can also be applied to data which may not be linear or data that is continuous or categorical. However, it has disadvantages, such as being prone to overfitting on the training data. This can be mitigated by pruning the tree or simplifying it by removing sections of the tree that are not critical to classification. For more advantages and disadvantages, read <span class="citation" data-cites="insidelearningmachines2023">Inside Learning Machines (<a href="references.html#ref-insidelearningmachines2023" role="doc-biblioref">2023</a>)</span>.</p>
-<p>Overall, as decision trees may not be best with new data, random forest algorithm of creating multiple decision tress instead of one, would be more useful.</p>
+<p><strong><em>Visualisation showing types of scattering for different features.</em></strong> <strong>Source:</strong> <span class="citation" data-cites="nasa2020">NASA (<a href="references.html#ref-nasa2020" role="doc-biblioref">2020a</a>)</span></p>
+<p>Referring to the image above</p>
+<ol type="1">
+<li>Strong scattering in the <u>VV polarisation</u> indicates a predominance of rough scattering. This suggests the presence of surfaces with coarse textures such as bare earth and rough water surfaces.</li>
+<li>Strong scattering in the <u>VH or HV polarisation</u> (i.e.&nbsp;cross polarisation) indicates sensitivity to volume scattering. This implies the dominance of volumetric features such as dense vegetation, in particular leaves and branches.</li>
+<li>Strong scattering in the <u>HH polarisation</u>, signifies a tendency towards double bounce scattering. This indicates the presence of features that cause a double bounce effect, such as buildings, tree trunks and calm water surfaces.</li>
+</ol>
+<p>The interpretation of SAR images is not the most straightforward. The Alaska Satellite Facility conceptualised some rule of thumb on interpreting different features. For more information, read <span class="citation" data-cites="alaskasatellitefacility2019">Alaska Satellite Facility (<a href="references.html#ref-alaskasatellitefacility2019" role="doc-biblioref">2019b</a>)</span>.</p>
 </section>
-<section id="application" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="application"><span class="header-section-number">6.2</span> Application</h2>
-<p>This week’s practical brings us to Shenzhen where we classified data using CART and Random Forest. We also utilised a train test split to train the model and test its accuracy on the test data. The results are as below.</p>
+<section id="application" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="application"><span class="header-section-number">8.2</span> Application</h2>
+<p>This week’s tutorial was one of my favourite which used SAR to perform a change detection of the Beirut port explosion in 2020 using Sentinel 1 image. SAR is useful for such tasks as it is able to detect subtle changes in amplitude and phase of radar wave reflection due to building damages, which are not easily observable in visible light imagery <span class="citation" data-cites="nasa2020a">(<a href="references.html#ref-nasa2020a" role="doc-biblioref">NASA 2020b</a>)</span>.</p>
+<p>The image needs to be filtered for its ascending and descending orbit, as the satellite views the earth’s surface from different angles. The t-test can then be calculated for each orbit to examine if the change observed is statistically significant before the results are combined into a single image. The t-test involves comparing images in the year before the explosion to establish a baseline and images two months after the explosion to capture the explosion effects, while excluding reconstruction efforts. Validation using building footprint data was then performed to check if the extent of the damage was accurately predicted. The end result shows the number of damaged buildings was 9256, which was close to UN’s estimate of 10000 buildings. An explanation for this underestimation is that the satellite image provides a top-down point of view of the buildings. However, some buildings could still be standing with their roof intact, yet receive damage at the sides which are not captured by the satellite.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="W7Image/CART.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+<p><img src="W9Image/ChangeDetection.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
 </div>
-<p><strong><em>CART classification algorithm for Shenzhen (Green=Forest, Purple=Urban, Tan=Water, Red=Grass).</em></strong> <strong>Source:</strong> Author’s Own</p>
-<p>As mentioned earlier, CART has an issue of overfitting. Random Forest attempts to address this issue by creating multiple decision trees based on random subsets of the training data (with replacement), with the final tree formed through voting or averaging <span class="citation" data-cites="belgiu2016">(<a href="references.html#ref-belgiu2016" role="doc-biblioref">Belgiu and Drăguţ 2016</a>)</span>. This variability improves the model’s classification performance and ability to generalise to new data.</p>
+<p><strong><em>Damage assessment of Beirut after the 2020 port explosion (Red=high damage, Yellow/Orange=medium damage, Green=low damage, Blue=no damage).</em></strong> <strong>Source:</strong> Author’s own</p>
+<p>Another use of SAR is for oil spill detection <span class="citation" data-cites="chen2017">(<a href="references.html#ref-chen2017" role="doc-biblioref">Chen et al. 2017</a>)</span>. SAR is suitable for this task due to its wide coverage and all-weather conditions. Earlier studies focused on using single polarimetric SAR images, where oil slicks appear as dark areas due to the suppression of Bragg scattering from the ocean surface. However, distinguishing oil spills from other phenomena like biogenic slicks posed challenges. Various studies proposed other polarimetric features to classify oil spills such as standard deviation of copolarised phase difference, pedestrial height and copolarisation ratio. <span class="citation" data-cites="chen2017">Chen et al. (<a href="references.html#ref-chen2017" role="doc-biblioref">2017</a>)</span> applied deep learning algorithms to optimise polarimetric feature sets for oil spill detection based on the 2011 Norwegian oil-on-water exercise. Their approach outperformed other methods such as support vector machine and artificial neural networks in distinguishing between different types of slicks. Overall, this study shows that SAR can be useful for obtaining more information about different surfaces and distinguish them based on their properties, along with the integration of machine learning to improve classification problems.</p>
+<p>Interferometric Synthetic Aperture Radar (InSAR) is an extension of SAR which combines multiple SAR images acquired from slightly different positions and times to create interferograms <span class="citation" data-cites="usgsc">(<a href="references.html#ref-usgsc" role="doc-biblioref">USGS, n.d.</a>)</span>. It can be used to study ground deformation such as at volcanic areas <span class="citation" data-cites="schaefer2016">(<a href="references.html#ref-schaefer2016" role="doc-biblioref">Schaefer, Lu, and Oommen 2016</a>)</span>. InSAR offers advantages over field monitoring, such as lower cost, lower risk and the ability to detect subtle ground deformation near volcanic areas that may not be easily observable. It also boasts high spatial resolution and continuous monitoring capabilities. By utilising InSAR for post-eruption of Pacaya volcano in Guatemala in 2010, subsidence and deformation can be detected. This information can contribute to understanding the stability of the volcano and aid in hazard assessment. UASVAR and ALOS-1 were used as complementary datasets to analyse activities before the eruptions, their evolution and the impact on the surrounding terrain. Beyond volcanic monitoring, in the field of earth observation and geoscience, InSAR can be used to study earthquakes and glaciers using similar methodologies. which follow the same methodology.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="W7Image/RF_pixel.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+<p><img src="W9Image/SARvolcano.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
 </div>
-<p><strong><em>Random Forest algorithm for Shenzhen (Green=Forest, Purple=Urban, Tan=Water, Red=Grass).</em></strong> <strong>Source:</strong> Author’s Own</p>
-<p>It is a bit hard to see the difference in results but some of the grass areas are now classified correctly instead of forest. The validation overall accuracy is approximately 99.4% which represents the accuracy of the model on the testing dataset.</p>
-<p>Random Forest Algorithm has been applied to Sentinel 2 Images to study fire severity in south-eastern Australia <span class="citation" data-cites="gibson2020">(<a href="references.html#ref-gibson2020" role="doc-biblioref">Gibson et al. 2020</a>)</span>. The study applied the algorithm for different indices such as differenced normalised burn ratio (dNBR), relativised change in fractional cover (RdFCT) and differenced normalised differenced vegetation index (dNDVI). The results were compared to aerial photograph interpretations (API) which revealed that the fractional cover indices were more accurate in differentiating burnt from non-burnt areas. However, accuracy varied across canopy types, with higher accuracy to when the entire crown was completely scorched as compared to when only the understory was burnt. This is expected as optical sensors face challenges in detecting burnt understory especially with higher canopy cover. This study shows that besides the inherent limitations of random forest (e.g.&nbsp;overfitting, computationally intensive), it is important to recognise the limitations of the dataset as well.</p>
-<p>Random Forest has been used with remote sensing data for prediction purposes as demonstrated in a study that predicted droughts on a five-day period in East Asia <span class="citation" data-cites="park2018">(<a href="references.html#ref-park2018" role="doc-biblioref">Park et al. 2018</a>)</span>. The study used data from MODIS was used to calculate Land Surface Temperature (LST) and Normalised Difference Vegetation Index (NDVI), precipitation data from Goddard Earth Sciences Data and Information Centre and soil moisture from the European Space Agency, and real-time multivariate Madden-Julian oscillation (MJO) indices from the Australian Bureau of Meteorology. The maps exhibited spatial patterns similar to the actual drought index maps which is a step-in drought monitoring and warning systems. This could provide decision-makers with accurate and timely information to implement relevant measures.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="W7Image/drought.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<p><strong><em>Comparison of drought conditions between actual Vegetation Supply-Demand Index (VSDI) and predicted VSDIs from two models (with and without Madden-Julian Oscillation) in 2011.</em></strong> <strong>Source:</strong> <span class="citation" data-cites="park2018">Park et al. (<a href="references.html#ref-park2018" role="doc-biblioref">2018</a>)</span></p>
-</section>
-<section id="reflection" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.3</span> Reflection</h2>
-<p>During my undergraduate, I did supervised classification in ENVI using maximum likelihood classification which I found to be a straightforward practical due to the intuitive interface. On hindsight, I better understand its limitations such as the requirement regarding knowing the probability of a pixel belonging to a specific land type. While CART and random forest are powerful tools for classification, the process can feel like a black box as we are unable to see what happens during the entire process from train-test split to model generation.</p>
-<p>Additionally, many studies extend beyond classification alone, often combining classification with other methods or tools such as change detection for deforestation or prediction of natural hazards. With deeper understanding of how to utilise these tools and interpret their results, they can become useful tools to inform decision-makers.</p>
+<p><strong><em>Displacement and deformation at Pacaya post-2010 eruption indicated by the negative values.</em></strong> <strong>Source:</strong> <span class="citation" data-cites="schaefer2016">Schaefer, Lu, and Oommen (<a href="references.html#ref-schaefer2016" role="doc-biblioref">2016</a>)</span></p>
+<p>There are just so many applications of SAR. The <span class="citation" data-cites="alaskasatellitefacility2019a">Alaska Satellite Facility (<a href="references.html#ref-alaskasatellitefacility2019a" role="doc-biblioref">2019a</a>)</span> has compiled the following map which shows the different uses of SAR around the world.</p>
+<p><iframe width="560" height="315" src="https://www.google.com/maps/d/embed?mid=1xEMc6CELSD5f894ycaPcOSs7PzU&amp;ehbc=2E312F" title="SAR applications" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></p>
+</iframe>
+</p></section>
+<section id="reflection" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">8.3</span> Reflection</h2>
+<p>SAR was quite an interesting topic to read about as compared to other satellites. There were more considerations such as polarisation, or whether the satellite was on an ascending or descending orbits. I was also fascinated by the various uses cases of SAR such as land subsidence, damage assessment, and its applications in archaeology. This made me wonder, given SAR’s valuable information and advantages, why is it avoided at times or considered disadvantageous?</p>
+<p>From the practical and through other readings, SAR images generally require more processing, for example, considering polarisation and the orbit direction. They cannot be visually interpreted easily like an image and may suffer from information loss due to shadow <span class="citation" data-cites="um2021">(<a href="references.html#ref-um2021" role="doc-biblioref">Um 2021</a>)</span>. Additionally, SAR cannot be used to calculate various spectral indices directly, such as NDVI, as it operates in the microwave portion of the electromagnetic spectrum and measures backscatter to the Earth. In other words, it cannot capture the spectral properties of various materials <span class="citation" data-cites="mazza2018">(<a href="references.html#ref-mazza2018" role="doc-biblioref">Mazza et al. 2018</a>)</span>.</p>
+<p>This reflection marks the end of the course. I think I come a long way in learning about remote sensing back in 2018 in my penultimate year of undergraduate, where I was exposed to ENVI and ArcGIS and limited to the lab computers. It is amazing how I was able to run all the practical from the past weeks on my personal device and that data is more accessible. The range of techniques and topics covered in this course was broader, encompassing classification, change detection, machine learning and different satellites. Remote sensing is a really exciting field and I hope to apply it to more projects in the future.</p>
+<p>Also special shout-outs to my profs for their amazing lectures and practicals. Their resources can be found at <span class="citation" data-cites="maclachlan2024">MacLachlan (<a href="references.html#ref-maclachlan2024" role="doc-biblioref">2024</a>)</span> and <span class="citation" data-cites="ballinger2024">Ballinger (<a href="references.html#ref-ballinger2024" role="doc-biblioref">2024</a>)</span>.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-bakker2015" class="csl-entry" role="listitem">
-Bakker, Jonathan D. 2015. <span>“Overview of Classification and Regression Trees.”</span> In. Switzerland: Springer. <a href="https://uw.pressbooks.pub/appliedmultivariatestatistics/chapter/classification-and-regression-trees/">https://uw.pressbooks.pub/appliedmultivariatestatistics/chapter/classification-and-regression-trees/</a>.
+<div id="ref-alaskasatellitefacility2019a" class="csl-entry" role="listitem">
+Alaska Satellite Facility. 2019a. <span>“What Is SAR?”</span> <a href="https://asf.alaska.edu/information/sar-information/what-is-sar/">https://asf.alaska.edu/information/sar-information/what-is-sar/</a>.
 </div>
-<div id="ref-belgiu2016" class="csl-entry" role="listitem">
-Belgiu, Mariana, and Lucian Drăguţ. 2016. <span>“Random Forest in Remote Sensing: A Review of Applications and Future Directions.”</span> <em>ISPRS Journal of Photogrammetry and Remote Sensing</em> 114: 24–31. <a href="https://doi.org/10.1016/j.isprsjprs.2016.01.011">https://doi.org/10.1016/j.isprsjprs.2016.01.011</a>.
+<div id="ref-alaskasatellitefacility2019" class="csl-entry" role="listitem">
+———. 2019b. <span>“How Do i Interpret SAR Images?”</span> <a href="https://asf.alaska.edu/information/sar-information/how-do-i-read-sar-images/">https://asf.alaska.edu/information/sar-information/how-do-i-read-sar-images/</a>.
 </div>
-<div id="ref-brownlee2020" class="csl-entry" role="listitem">
-Brownlee, Jason. 2020. <span>“Classification and Regression Trees for Machine Learning.”</span> <a href="https://machinelearningmastery.com/classification-and-regression-trees-for-machine-learning/">https://machinelearningmastery.com/classification-and-regression-trees-for-machine-learning/</a>.
+<div id="ref-ballinger2024" class="csl-entry" role="listitem">
+Ballinger, Ollie. 2024. <span>“CASA0025: Building Spatial Applications with Big Data.”</span> <a href="https://oballinger.github.io/CASA0025/">https://oballinger.github.io/CASA0025/</a>.
 </div>
-<div id="ref-geeksforgeeks2023" class="csl-entry" role="listitem">
-GeeksforGeeks. 2023. <span>“CART (Classification and Regression Tree) in Machine Learning.”</span> <a href="https://www.geeksforgeeks.org/cart-classification-and-regression-tree-in-machine-learning/">https://www.geeksforgeeks.org/cart-classification-and-regression-tree-in-machine-learning/</a>.
+<div id="ref-californiainstituteoftechnology" class="csl-entry" role="listitem">
+California Institute of Technology. n.d. <span>“Overview | Get to Know SAR.”</span> <a href="https://nisar.jpl.nasa.gov/mission/get-to-know-sar/overview">https://nisar.jpl.nasa.gov/mission/get-to-know-sar/overview</a>.
 </div>
-<div id="ref-gibson2020" class="csl-entry" role="listitem">
-Gibson, Rebecca, Tim Danaher, Warwick Hehir, and Luke Collins. 2020. <span>“A Remote Sensing Approach to Mapping Fire Severity in South-Eastern Australia Using Sentinel 2 and Random Forest.”</span> <em>Remote Sensing of Environment</em> 240: 111702. <a href="https://doi.org/10.1016/j.rse.2020.111702">https://doi.org/10.1016/j.rse.2020.111702</a>.
+<div id="ref-chen2017" class="csl-entry" role="listitem">
+Chen, Guandong, Yu Li, Guangmin Sun, and Yuanzhi Zhang. 2017. <span>“Application of Deep Networks to Oil Spill Detection Using Polarimetric Synthetic Aperture Radar Images.”</span> <em>Applied Sciences</em> 7 (10): 968. <a href="https://doi.org/10.3390/app7100968">https://doi.org/10.3390/app7100968</a>.
 </div>
-<div id="ref-insidelearningmachines2023" class="csl-entry" role="listitem">
-Inside Learning Machines. 2023. <span>“8 Key Advantages and Disadvantages of Decision Trees.”</span> <a href="https://insidelearningmachines.com/advantages_and_disadvantages_of_decision_trees/">https://insidelearningmachines.com/advantages_and_disadvantages_of_decision_trees/</a>.
+<div id="ref-gisgeography2015" class="csl-entry" role="listitem">
+GIS Geography. 2015. <span>“Passive Vs Active Sensors in Remote Sensing.”</span> <a href="https://gisgeography.com/passive-active-sensors-remote-sensing/">https://gisgeography.com/passive-active-sensors-remote-sensing/</a>.
 </div>
-<div id="ref-karabiber" class="csl-entry" role="listitem">
-Karabiber, Faith. n.d. <span>“Gini Impurity.”</span> <a href="https://www.learndatasci.com/glossary/gini-impurity/">https://www.learndatasci.com/glossary/gini-impurity/</a>.
+<div id="ref-maclachlan2024" class="csl-entry" role="listitem">
+MacLachlan, Andy. 2024. <span>“CASA0023 Remotely Sensing Cities and Environments.”</span> <a href="https://andrewmaclachlan.github.io/CASA0023/">https://andrewmaclachlan.github.io/CASA0023/</a>.
 </div>
-<div id="ref-minitab" class="csl-entry" role="listitem">
-Minitab. n.d. <span>“Model Summary for CART® Regression.”</span> <a href="https://support.minitab.com/en-us/minitab/20/help-and-how-to/statistical-modeling/predictive-analytics/how-to/cart-regression/interpret-the-results/all-statistics-and-graphs/model-summary-table/">https://support.minitab.com/en-us/minitab/20/help-and-how-to/statistical-modeling/predictive-analytics/how-to/cart-regression/interpret-the-results/all-statistics-and-graphs/model-summary-table/</a>.
+<div id="ref-mazza2018" class="csl-entry" role="listitem">
+Mazza, Antonio, Massimiliano Gargiulo, Giuseppe Scarpa, and Raffaele Gaetano. 2018. <span>“Estimating the NDVI from SAR by Convolutional Neural Networks.”</span> In, 1954–57. <a href="https://doi.org/10.1109/IGARSS.2018.8519459">https://doi.org/10.1109/IGARSS.2018.8519459</a>.
 </div>
-<div id="ref-park2018" class="csl-entry" role="listitem">
-Park, Seonyoung, Eunkyo Seo, Daehyun Kang, Jungho Im, and Myong-In Lee. 2018. <span>“Prediction of Drought on Pentad Scale Using Remote Sensing Data and MJO Index Through Random Forest over East Asia.”</span> <em>Remote Sensing</em> 10 (11): 1811. <a href="https://doi.org/10.3390/rs10111811">https://doi.org/10.3390/rs10111811</a>.
+<div id="ref-nasa2020" class="csl-entry" role="listitem">
+NASA. 2020a. <span>“What Is Synthetic Aperture Radar? | Earthdata.”</span> <a href="https://www.earthdata.nasa.gov/learn/backgrounders/what-is-sar">https://www.earthdata.nasa.gov/learn/backgrounders/what-is-sar</a>.
 </div>
-<div id="ref-sharma2013" class="csl-entry" role="listitem">
-Sharma, Richa, Aniruddha Ghosh, and P. K. JOSHI. 2013. <span>“Decision Tree Approach for Classification of Remotely Sensed Satellite Data Using Open Source Support.”</span> <em>Journal of Earth System Science</em> 122 (5): 1237–47. <a href="https://doi.org/10.1007/s12040-013-0339-2">https://doi.org/10.1007/s12040-013-0339-2</a>.
+<div id="ref-nasa2020a" class="csl-entry" role="listitem">
+———. 2020b. <span>“Scientists Map Beirut Blast Damage.”</span> <a href="https://earthobservatory.nasa.gov/images/147098/scientists-map-beirut-blast-damage">https://earthobservatory.nasa.gov/images/147098/scientists-map-beirut-blast-damage</a>.
 </div>
-<div id="ref-wu2013" class="csl-entry" role="listitem">
-Wu, Zhiwei, Hong He, Yu Liang, Longyan Cai, and Bernard Lewis. 2013. <span>“Determining Relative Contributions of Vegetation and Topography to Burn Severity from LANDSAT Imagery.”</span> <em>Environmental Management</em> 52. <a href="https://doi.org/10.1007/s00267-013-0128-3">https://doi.org/10.1007/s00267-013-0128-3</a>.
+<div id="ref-schaefer2016" class="csl-entry" role="listitem">
+Schaefer, Lauren N., Zhong Lu, and Thomas Oommen. 2016. <span>“Post-Eruption Deformation Processes Measured Using ALOS-1 and UAVSAR InSAR at Pacaya Volcano, Guatemala.”</span> <em>Remote Sensing</em> 8 (1): 73. <a href="https://doi.org/10.3390/rs8010073">https://doi.org/10.3390/rs8010073</a>.
 </div>
-<div id="ref-yadav2019" class="csl-entry" role="listitem">
-Yadav, Ajay. 2019. <span>“Decision Trees.”</span> <a href="https://towardsdatascience.com/decision-trees-d07e0f420175">https://towardsdatascience.com/decision-trees-d07e0f420175</a>.
+<div id="ref-um2021" class="csl-entry" role="listitem">
+Um, Albert. 2021. <span>“Introduction to Sentinel 1: SAR (Synthetic-Aperture Radar) Data.”</span> <a href="https://albertum.medium.com/introduction-to-sentinel-1-sar-synthetic-aperture-radar-data-2cca22cb35a6">https://albertum.medium.com/introduction-to-sentinel-1-sar-synthetic-aperture-radar-data-2cca22cb35a6</a>.
+</div>
+<div id="ref-usgsc" class="csl-entry" role="listitem">
+USGS. n.d. <span>“InSAR<span></span>satellite-Based Technique Captures Overall Deformation <span>"</span>Picture<span>"</span>.”</span> <a href="https://www.usgs.gov/programs/VHP/insar-satellite-based-technique-captures-overall-deformation-picture">https://www.usgs.gov/programs/VHP/insar-satellite-based-technique-captures-overall-deformation-picture</a>.
 </div>
 </div>
 </section>
@@ -737,13 +740,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Chapter 5.html" class="pagination-link  aria-label=" &lt;span="" earth="" engine&lt;="" span&gt;"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Google Earth Engine</span></span>
+      <a href="./Chapter 7.html" class="pagination-link  aria-label=" &lt;span="" ii&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Chapter 7.html" class="pagination-link" aria-label="<span class='chapter-number'>7</span>&nbsp; <span class='chapter-title'>Classification II</span>">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Classification II</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

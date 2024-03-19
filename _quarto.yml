@@ -15,6 +15,7 @@ book:
       - Chapter 5.qmd
       - Chapter 6.qmd
       - Chapter 7.qmd
+      - Chapter 8.qmd
       - references.qmd
 
 bibliography: references.bib
