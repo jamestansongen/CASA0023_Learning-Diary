@@ -18,7 +18,7 @@ NASA: Remote sensing is acquiring of information from a distance. NASA observes 
 
 ### Types of Resolution
 
-1.  Spatial Resolution: the size of each pixel within a digital image and the area on Earth's surface represented by that pixel [@nasa]. A finer spatial resolution (or the smaller the number) means one is able to observe greater details while a coarser spatial resolution (or the bigger the number) means the image would be more pixelated as demonstrated below.
+1.  Spatial Resolution: "the size of each pixel within a digital image and the area on Earth's surface represented by that pixel" [@nasa]. A finer spatial resolution (or the smaller the number) means one is able to observe greater details while a coarser spatial resolution (or the bigger the number) means the image would be more pixelated as demonstrated below.
 
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('W1Image/SpatialResolution.png')
@@ -34,7 +34,7 @@ knitr::include_graphics('W1Image/TemporalResolution.png')
 
 ***Geostationary and Polar Orbiting Satellites.*** **Source:** @instituteofphysics
 
-3.  Spectral Resolution: the number and width of spectral bands in a sensor system [@liang2020]. Sensors which have more bands with narrower wavelengths, have finer spectral resolution. This would allow greater distinction to be made between various features such as rock or vegetation types.
+3.  Spectral Resolution: "the number and width of spectral bands in a sensor system" [@liang2020]. Sensors which have more bands with narrower wavelengths, have finer spectral resolution. This would allow greater distinction to be made between various features such as rock or vegetation types.
 
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('W1Image/SpectralResolution.png')
@@ -42,7 +42,7 @@ knitr::include_graphics('W1Image/SpectralResolution.png')
 
 ***Comparison of spectral bands between Sentinel-2 and Landsat-8 which have similar characteristics for the coastal aerosol (440 nm), visible (490-800 nm) and short-wave infrared or SWIR (1300-2400 nm) spectral bands.*** **Source:** @lopez-puigdollersBenchmarkingDeepLearning2021
 
-4.  Radiometric Resolution: amount of information in each pixel [@nasa]. Sensors with higher radiometric resolution are more sensitive and able to detect subtle differences in electromagnetic energy. This allows for features to be distinguished better such as variations in vegetation or water colour.
+4.  Radiometric Resolution: "amount of information in each pixel" [@nasa]. Sensors with higher radiometric resolution are more sensitive and able to detect subtle differences in electromagnetic energy. This allows for features to be distinguished better such as variations in vegetation or water colour.
 
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('W1Image/RadiometricResolution.png')
@@ -96,7 +96,7 @@ Overall, Sentinel-2 would be useful for looking at Land Use Land Cover (LULC) an
 
 Why can’t we develop a satellite that boast the best spatial, temporal, spectral and radiometric resolution, while also incorporating sensors for diverse measurements such as temperature? The limitations stem from inherent trade-offs related to the sensor designs. For example, better quality spatial and multispectral data on satellites would compete for onboard data storage space, as well as data transmission requirements to communicate with ground stations [@ciesin1993]. To improve the signal-to-noise ratio, solutions such as having a larger pixel size or accepting light from a wider spectral interval can be used, but will result in a decrease in spatial and spectral resolution respectively [@jiaTradeoffsSpatialSpectral2022].
 
-Given that no perfect satellite exists currently, it ultimately depends on one’s research needs and what to prioritise. MODIS which has 36 bands, can be used to study dust clouds because its bands 29-32 are able to track dust aerosols and it has a temporal resolution of one day [@boroughaniPredictingDustStorm2021]. However, it has medium spatial resolution at 250m, 500m and 1000m depending on the band. . On the other hand, a study of land use changes over time probably does not require daily satellite images but perhaps at a monthly interval. However, higher spatial resolution to distinguish finer details to observe changes in the pattern would be essential. A table of some commonly used satellite sensors as below compiled shows some of the tradeoffs between the various resolutions.
+Given that no perfect satellite exists currently, it ultimately depends on one’s research needs and what to prioritise. MODIS which has 36 bands, can be used to study dust clouds because its bands 29-32 are able to track dust aerosols and it has a temporal resolution of one day [@boroughaniPredictingDustStorm2021]. However, it has medium spatial resolution at 250m, 500m and 1000m depending on the band. On the other hand, a study of land use changes over time probably does not require daily satellite images but perhaps at a monthly interval. However, higher spatial resolution to distinguish finer details to observe changes in the pattern would be essential. A table of some commonly used satellite sensors as below compiled shows some of the tradeoffs between the various resolutions.
 
 ```{r echo=FALSE, out.width='100%', fig.align='center'}
 knitr::include_graphics('W1Image/CommonSatellites.png')
